@@ -3,7 +3,6 @@
         "id": 1,
         "name": "A1C",
         "instructions": "Puncture the finger with a lancet to obtain the FIRST DROP of blood",
-        "A1Crange": "Normal Range: below 5.7%  Prediabetes: 5.7% - 6.4%  Diabetes: 6.5% or above",
         "bulletPoint": ["Bandaid", "Alcohol Wipes", "CottonBall", "Blue Lancet"]
     },
 
@@ -11,7 +10,7 @@
         "id": 2,
         "name": "Hemoglobin",
         "instructions": "Puncture the finger with a lancet and obtain 2-3 DROPS of blood",
-        "range": "Normal Range: Men: 13.8 - 17.2  Female: 12.1 - 15.1"
+        "bulletPoint": ["Apple","Bananna"]
     },
 
     {
