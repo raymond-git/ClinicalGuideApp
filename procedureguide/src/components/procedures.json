@@ -3,19 +3,26 @@
         "id": 1,
         "name": "A1C",
         "instructions": "Puncture the finger with a lancet to obtain the FIRST DROP of blood",
-        "bulletPoint": ["Bandaid", "Alcohol Wipes", "CottonBall", "Blue Lancet"]
+        "supplies": ["Bandaid", "CottonBall", "Alcohol Wipe", "Blue Lancet"]
     },
 
     {
         "id": 2,
         "name": "Hemoglobin",
         "instructions": "Puncture the finger with a lancet and obtain 2-3 DROPS of blood",
-        "bulletPoint": ["Apple","Bananna"]
+        "supplies": ["Bandaid","Cotton Ball", "Alcohol Wipe", "Blue Lancet", "Cuvettes Prick", "Blue Hemoglobin Machine"]
     },
 
     {
         "id": 3,
-        "name": "B",
-        "instructions": "Get first blood"
+        "name": "Glucose",
+        "instructions": "To perform a glucose test, first prepare your glucose meter and insert a test strip if needed. Clean your finger with an alcohol swab and let it dry. Use a lancing device to prick the side of your fingertip and gently squeeze to obtain a drop of blood. Use the second drop of blood for testing. Apply the second drop to the test strip according to the meter’s instructions and wait for the meter to display your blood glucose level.",
+        "supplies": ["Bandaid", "CottonBall", "Alcohol Wipe", "Red Glucose Machine", "HemoCue Glucose Cuvettes froma the Fridge" ]
+    },
+
+    {
+        "id": 4,
+        "name": "Sputum Instructions",
+        "instructions": "Clean the wound with antiseptic. Apply a bandage to the wound."
     }
 ]

@@ -15,14 +15,11 @@ const Homepage = () => {
         const resultsToDisplay = filteredResults.map(procedure => ({
             id: procedure.id,
             instructions: procedure.instructions,
-            bulletPoint: procedure.bulletPoint,
+            supplies: procedure.supplies,
         }));
 
         // Update state with filtered and extracted results
         setSearchResults(resultsToDisplay);
-
-        
-       
     };
 
     return (
@@ -57,7 +54,11 @@ const Homepage = () => {
                         <div key={result.id}>
                             <p>Instructions: {result.instructions}</p>
                             <div className="mt-6">
-                                <ul> {result.bulletPoint}</ul>
+                                <ol>
+                                    {result.supplies.map((item, index) => (
+                                        <li key={index}>{item}</li>
+                                    ))}
+                                </ol>
                             </div>
                         </div>
                     ))}
