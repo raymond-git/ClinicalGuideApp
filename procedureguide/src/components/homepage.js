@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import proceduresData from '../components/procedures.json'; // Adjust path as needed
-import { Input, Ripple, initMDB } from "mdb-ui-kit";
-
-initMDB({ Input, Ripple });
 
 const Homepage = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -19,7 +16,9 @@ const Homepage = () => {
             id: procedure.id,
             instructions: procedure.instructions,
             supplies: procedure.supplies,
-            images: procedure.images
+            images: procedure.images,
+            name: procedure.name,
+            fullImage: procedure.fullImage
         }));
 
         // Update state with filtered and extracted results
@@ -56,7 +55,13 @@ const Homepage = () => {
                 <div className="mt-20 ">
                     {searchResults.map(result => (
                         <div key={result.id}>
-                            <p>Instructions: {result.instructions}</p>
+                            
+                                <p className='text-4xl font-bold'>{result.name}</p>
+                          
+                            <p className='mt-8'>Instructions: {result.instructions}</p>
+
+
+
                             <div className="mt-6">
                                 {/* If there is an object with array present then it will show this code if not it won't show */}
                                 {result.supplies && result.supplies.length > 0 && (
@@ -82,6 +87,8 @@ const Homepage = () => {
                                     </div>
                                 )}
                             </div>
+
+                            <img src={result.fullImage} class="img-fluid w-80 h-80 flex justify-between" alt="..."></img>
                         </div>
                     ))}
                 </div>
