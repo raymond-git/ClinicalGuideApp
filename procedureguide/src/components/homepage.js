@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import proceduresData from '../components/procedures.json'; // Adjust path as needed
+import { Input, Ripple, initMDB } from "mdb-ui-kit";
+
+initMDB({ Input, Ripple });
 
 const Homepage = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -16,6 +19,7 @@ const Homepage = () => {
             id: procedure.id,
             instructions: procedure.instructions,
             supplies: procedure.supplies,
+            images: procedure.images
         }));
 
         // Update state with filtered and extracted results
@@ -23,13 +27,13 @@ const Homepage = () => {
     };
 
     return (
-        <div>
-            <div className="mt-4">
-                <div className="text-center text-lg lg:text-4xl">Search for Procedure</div>
-                <div className="input-group mt-4">
+        <div className='mx-20 md:mx-30 lg:mx-40'>
+            <div className="mt-32">
+                <div className="font-bold text-center text-lg lg:text-5xl">Clinical Procedure Lookup</div>
+                <div className="input-group mt-20">
                     <input
                         type="search"
-                        className="form-control rounded"
+                        className="border-1 form-control rounded"
                         placeholder="Search"
                         aria-label="Search"
                         aria-describedby="search-addon"
@@ -49,16 +53,34 @@ const Homepage = () => {
 
             {/* Render search results */}
             {searchResults.length > 0 && (
-                <div className="mt-4">
+                <div className="mt-20 ">
                     {searchResults.map(result => (
                         <div key={result.id}>
                             <p>Instructions: {result.instructions}</p>
                             <div className="mt-6">
-                                <ol>
-                                    {result.supplies.map((item, index) => (
-                                        <li key={index}>{item}</li>
-                                    ))}
-                                </ol>
+                                {/* If there is an object with array present then it will show this code if not it won't show */}
+                                {result.supplies && result.supplies.length > 0 && (
+                                    <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+                                        {/* Iterate over supplies */}
+                                        {result.supplies.map((item, index) => (
+                                            <div key={index} className="card">
+                                                {/* Check if there is a corresponding image */}
+                                                {result.images && result.images[index] && (
+                                                    <div className="relative">
+                                                        <img
+                                                            src={result.images[index]}
+                                                            className="card-img-top object-contain h-64 w-full"
+                                                            alt={`Image for ${item}`}
+                                                        />
+                                                    </div>
+                                                )}
+                                                <div className="card-body border-2 flex justify-center py-2">
+                                                    <p className="card-text lg:text-sm">{item}</p>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}

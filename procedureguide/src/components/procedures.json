@@ -3,7 +3,8 @@
         "id": 1,
         "name": "A1C",
         "instructions": "Puncture the finger with a lancet to obtain the FIRST DROP of blood",
-        "supplies": ["Bandaid", "CottonBall", "Alcohol Wipe", "Blue Lancet"]
+        "supplies": ["Bandaid", "CottonBall", "Alcohol Wipe", "Blue Lancet"],
+        "images":["bandaid.png", "cottonball.png", "alcoholwipe.png", "lancet.png"]
     },
 
     {
