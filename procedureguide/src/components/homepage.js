@@ -8,7 +8,7 @@ const Homepage = () => {
     const handleSearchClick = () => {
         // Filter procedures based on search term
         const filteredResults = proceduresData.filter(procedure =>
-            procedure.name.toLowerCase().includes(searchTerm.toLowerCase())
+            procedure.name.toLowerCase() === (searchTerm.toLowerCase())
         );
 
         // Extract id and instructions only from filtered results
@@ -18,15 +18,17 @@ const Homepage = () => {
             supplies: procedure.supplies,
             images: procedure.images,
             name: procedure.name,
-            fullImage: procedure.fullImage
+            fullImage: procedure.fullImage,
+            video: procedure.video
         }));
 
         // Update state with filtered and extracted results
         setSearchResults(resultsToDisplay);
+
     };
 
     return (
-        <div className='mx-20 md:mx-30 lg:mx-40'>
+        <div className='mx-20 md:mx-30 lg:mx-40 my-12'>
             <div className="mt-32">
                 <div className="font-bold text-center text-lg lg:text-5xl">Clinical Procedure Lookup</div>
                 <div className="input-group mt-20">
@@ -52,35 +54,23 @@ const Homepage = () => {
 
             {/* Render search results */}
             {searchResults.length > 0 && (
-                <div className="mt-20 ">
+                <div className="mt-20">
                     {searchResults.map(result => (
                         <div key={result.id}>
-                            
-                                <p className='text-4xl font-bold'>{result.name}</p>
-                          
+                            <p className='text-4xl font-bold'>{result.name}</p>
                             <p className='mt-8'>Instructions: {result.instructions}</p>
-
-
-
                             <div className="mt-6">
-                                {/* If there is an object with array present then it will show this code if not it won't show */}
                                 {result.supplies && result.supplies.length > 0 && (
                                     <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
-                                        {/* Iterate over supplies */}
-                                        {result.supplies.map((item, index) => (
+                                        {result.supplies.map((supply, index) => (
                                             <div key={index} className="card">
-                                                {/* Check if there is a corresponding image */}
-                                                {result.images && result.images[index] && (
-                                                    <div className="relative">
-                                                        <img
-                                                            src={result.images[index]}
-                                                            className="card-img-top object-contain h-64 w-full"
-                                                            alt={`Image for ${item}`}
-                                                        />
-                                                    </div>
-                                                )}
+                                                <div className="relative">
+                                                    {result.images && result.images[index] && (
+                                                        <img key={index} src={result.images[index]} className="card-img-top object-contain h-64 w-full" alt={`Image for ${supply}`} />
+                                                    )}
+                                                </div>
                                                 <div className="card-body border-2 flex justify-center py-2">
-                                                    <p className="card-text lg:text-sm">{item}</p>
+                                                    <p className="card-text lg:text-sm">{supply}</p>
                                                 </div>
                                             </div>
                                         ))}
@@ -88,7 +78,31 @@ const Homepage = () => {
                                 )}
                             </div>
 
-                            <img src={result.fullImage} class="img-fluid w-80 h-80 flex justify-between" alt="..."></img>
+
+                            <div>
+                                {result.video && result.video !== 0 && (
+                                    <p className='mt-32 text-4xl font-bold'>Test Overview and Visual Setup Reference</p>
+                                )}
+                                {!result.video && (
+                                    <p className='mt-32 text-4xl font-bold'></p>
+                                )}
+                            </div>
+
+
+                            {result.video && result.video.length !== 0 && (
+                                <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 flex items-stretch gap-4'>
+                                    <div className="border-3 mt-20 flex justify-center video-container">
+                                        <div className="embed-responsive embed-responsive-21by9">
+                                            <img className="object-fill w-full h-full embed-responsive-item" src={result.fullImage} />
+                                        </div>
+                                    </div>
+                                    <div className="border-3 mt-20 flex justify-center video-container">
+                                        <div className="embed-responsive embed-responsive-21by9">
+                                            <iframe className="embed-responsive-item" title="Video Player" src={result.video} allowFullScreen />
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>

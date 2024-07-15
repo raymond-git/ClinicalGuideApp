@@ -17,3 +17,17 @@ code {
     monospace;
 }
 
+.video-container {
+  width: 100%; /* Ensure the container spans the full width of its parent */
+  height: 500px;
+}
+
+.video-container .embed-responsive {
+  width: 100%; /* Ensure the embed-responsive div stretches to the full width */
+  height: 100%;
+}
+
+.video-container .embed-responsive .embed-responsive-item {
+  width: 100%; /* Ensure the embedded item (like iframe or video) stretches to the full width */
+  height: 100%;
+}

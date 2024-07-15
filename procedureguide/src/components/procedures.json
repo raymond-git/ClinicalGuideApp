@@ -5,7 +5,8 @@
         "instructions": "Puncture the finger with a lancet to obtain the FIRST DROP of blood",
         "supplies": ["Bandaid", "CottonBall", "Alcohol Wipe", "Blue Lancet"],
         "images":["bandaid.png", "cottonball.png", "alcoholwipe.png", "lancet.png"],
-        "fullImage": ["a1c.png"]
+        "fullImage": ["procedure.png"],
+        "video": "https://www.youtube.com/embed/BxvDmjRG8dM"
         
     },
 
@@ -13,7 +14,9 @@
         "id": 2,
         "name": "Hemoglobin",
         "instructions": "Puncture the finger with a lancet and obtain 2-3 DROPS of blood",
-        "supplies": ["Bandaid","Cotton Ball", "Alcohol Wipe", "Blue Lancet", "Cuvettes Prick", "Blue Hemoglobin Machine"]
+        "supplies": ["Bandaid","Cotton Ball", "Alcohol Wipe", "Blue Lancet", "Cuvettes Prick", "Blue Hemoglobin Machine"],
+        "images":["bandaid.png", "cottonball.png", "alcoholwipe.png", "lancet.png"]
+        
     },
 
     {
@@ -25,7 +28,7 @@
 
     {
         "id": 4,
-        "name": "S",
+        "name": "Se",
         "instructions": "Date Sputum to be performed by patient\n hellow" 
     }
 ]
