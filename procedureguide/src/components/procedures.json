@@ -2,10 +2,10 @@
     {
         "id": 1,
         "name": "A1C",
-        "instructions": "Puncture the finger with a lancet to obtain the FIRST DROP of blood",
-        "supplies": ["Bandaid", "CottonBall", "Alcohol Wipe", "Blue Lancet"],
+        "instructions":"Puncture the finger with a lancet to obtain the FIRST DROP of blood",
+        "supplies": ["Bandaid", "Cotton Ball", "Alcohol Wipe", "Blue Lancet"],
         "images":["bandaid.png", "cottonball.png", "alcoholwipe.png", "lancet.png"],
-        "fullImage": ["procedure.png"],
+        "fullImage": "procedure.png",
         "video": "https://www.youtube.com/embed/BxvDmjRG8dM"
         
     },
@@ -15,7 +15,9 @@
         "name": "Hemoglobin",
         "instructions": "Puncture the finger with a lancet and obtain 2-3 DROPS of blood",
         "supplies": ["Bandaid","Cotton Ball", "Alcohol Wipe", "Blue Lancet", "Cuvettes Prick", "Blue Hemoglobin Machine"],
-        "images":["bandaid.png", "cottonball.png", "alcoholwipe.png", "lancet.png"]
+        "images":["bandaid.png", "cottonball.png", "alcoholwipe.png", "lancet.png"],
+        "fullImage": "logo192.png",
+        "video" : "https://www.youtube.com/embed/mOdSV1gClOM"
         
     },
 

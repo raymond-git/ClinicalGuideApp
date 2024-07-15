@@ -11,15 +11,15 @@ const Homepage = () => {
             procedure.name.toLowerCase() === (searchTerm.toLowerCase())
         );
 
-        // Extract id and instructions only from filtered results
+        // Extract id, name, instructions, supplies, images, full image, and video only from filtered results
         const resultsToDisplay = filteredResults.map(procedure => ({
-            id: procedure.id,
+            procedureId: procedure.id,
             instructions: procedure.instructions,
-            supplies: procedure.supplies,
-            images: procedure.images,
-            name: procedure.name,
-            fullImage: procedure.fullImage,
-            video: procedure.video
+            requiredSupplies: procedure.supplies,
+            imageUrls: procedure.images,
+            procedureName: procedure.name,
+            fullImageUrl: procedure.fullImage,
+            videoUrl: procedure.video
         }));
 
         // Update state with filtered and extracted results
@@ -57,16 +57,16 @@ const Homepage = () => {
                 <div className="mt-20">
                     {searchResults.map(result => (
                         <div key={result.id}>
-                            <p className='text-4xl font-bold'>{result.name}</p>
+                            <p className='text-4xl font-bold'>{result.procedureName}</p>
                             <p className='mt-8'>Instructions: {result.instructions}</p>
                             <div className="mt-6">
-                                {result.supplies && result.supplies.length > 0 && (
+                                {result.requiredSupplies && result.requiredSupplies.length > 0 && (
                                     <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
-                                        {result.supplies.map((supply, index) => (
+                                        {result.requiredSupplies.map((supply, index) => (
                                             <div key={index} className="card">
                                                 <div className="relative">
-                                                    {result.images && result.images[index] && (
-                                                        <img key={index} src={result.images[index]} className="card-img-top object-contain h-64 w-full" alt={`Image for ${supply}`} />
+                                                    {result.imageUrls && result.imageUrls[index] && (
+                                                        <img key={index} src={result.imageUrls[index]} className="card-img-top object-cover h-64 w-full" alt={`${supply}`} />
                                                     )}
                                                 </div>
                                                 <div className="card-body border-2 flex justify-center py-2">
@@ -78,27 +78,27 @@ const Homepage = () => {
                                 )}
                             </div>
 
-
+                            {/* If no videos are found during the search, title will not be available */}
                             <div>
-                                {result.video && result.video !== 0 && (
+                                {result.videoUrl && result.videoUrl !== 0 && (
                                     <p className='mt-32 text-4xl font-bold'>Test Overview and Visual Setup Reference</p>
                                 )}
-                                {!result.video && (
+                                {!result.videoUrl && (
                                     <p className='mt-32 text-4xl font-bold'></p>
                                 )}
                             </div>
 
 
-                            {result.video && result.video.length !== 0 && (
+                            {result.videoUrl && result.videoUrl.length !== 0 && (
                                 <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 flex items-stretch gap-4'>
                                     <div className="border-3 mt-20 flex justify-center video-container">
                                         <div className="embed-responsive embed-responsive-21by9">
-                                            <img className="object-fill w-full h-full embed-responsive-item" src={result.fullImage} />
+                                            <img className="object-fill w-full h-full embed-responsive-item" src={result.fullImageUrl} alt="fullImageUrl" />
                                         </div>
                                     </div>
                                     <div className="border-3 mt-20 flex justify-center video-container">
                                         <div className="embed-responsive embed-responsive-21by9">
-                                            <iframe className="embed-responsive-item" title="Video Player" src={result.video} allowFullScreen />
+                                            <iframe className="embed-responsive-item" title="Video Player" src={result.videoUrl} allowFullScreen />
                                         </div>
                                     </div>
                                 </div>
