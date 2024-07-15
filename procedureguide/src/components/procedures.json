@@ -3,9 +3,9 @@
         "id": 1,
         "name": "A1C",
         "instructions":"Puncture the finger with a lancet to obtain the FIRST DROP of blood",
-        "supplies": ["Bandaid", "Cotton Ball", "Alcohol Wipe", "Blue Lancet"],
-        "images":["bandaid.png", "cottonball.png", "alcoholwipe.png", "lancet.png"],
-        "fullImage": "procedure.png",
+        "supplies": ["Bandaid", "Cotton Ball", "Alcohol Wipe", "Blue Lancet", "DCA HbA1c Regent Kit"],
+        "images":["bandaid.png", "cottonball.png", "alcoholwipe.png", "lancet.png", "hba1ckit.png"],
+        "fullImage": "a1csetup.png",
         "video": "https://www.youtube.com/embed/BxvDmjRG8dM"
         
     },
@@ -31,6 +31,10 @@
     {
         "id": 4,
         "name": "Se",
-        "instructions": "Date Sputum to be performed by patient\n hellow" 
+        "instructions": "Date Sputum to be performed by patient\n hellow",
+        "supplies": ["Bag","tube", "Public Health Specimen Form", "Requisition Lab Slip"],
+        "images":["bag.png", "tube.png", "specimen_form.png"],
+        "fullImage": "logo192.png",
+        "video" : "https://www.youtube.com/embed/mOdSV1gClOM"
     }
 ]
