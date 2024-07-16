@@ -34,10 +34,11 @@
         "subtitle": "Morning Sputum Collection Instructions:",
         "subtitle2": "Sputum Instruction for Patient",
         "bulletPoints": [
-            "Arrive at the lab with your appointment confirmation.",
-            "Ensure you are fasting for 12 hours before the test.",
-            "Follow the lab technician’s instructions for sample collection."
-          ],
+            "Collect sputum immediately after waking up.",
+            "Do not brush your teeth or drink water beforehand.",
+            "Ensure sputum (not saliva) reaches the line 5 mark on the tube.",
+            "If needed, keep coughing until the mucus reaches the line."
+        ],
         "supplies": ["Bag","Tube", "Public Health Specimen Form", "Requisition Lab Slip"],
         "images":["bag.png", "tube.png", "specimen_form.png"],
         "fullImage": "logo192.png"
