@@ -19,7 +19,8 @@ const Homepage = () => {
             imageUrls: procedure.images,
             procedureName: procedure.name,
             fullImageUrl: procedure.fullImage,
-            videoUrl: procedure.video
+            videoUrl: procedure.video,
+            sub: procedure.subtitle
         }));
 
         // Update state with filtered and extracted results
