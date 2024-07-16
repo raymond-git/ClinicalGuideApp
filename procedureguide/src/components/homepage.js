@@ -20,7 +20,9 @@ const Homepage = () => {
             procedureName: procedure.name,
             fullImageUrl: procedure.fullImage,
             videoUrl: procedure.video,
-            sub: procedure.subtitle
+            sub: procedure.subtitle,
+            sub2: procedure.subtitle2,
+            bulletPoints: procedure.bulletPoints
         }));
 
         // Update state with filtered and extracted results
@@ -59,7 +61,15 @@ const Homepage = () => {
                     {searchResults.map(result => (
                         <div key={result.id}>
                             <p className='text-4xl font-bold'>{result.procedureName}</p>
-                            <p className='mt-8'>Instructions: {result.instructions}</p>
+                            <p className='text-xl font-bold mt-20'>{result.sub}</p>
+                            <ul className='mt-4' style={{ listStyleType: 'disc', paddingLeft: '1em' }}>
+                                {result.bulletPoints.map((bullet, index) => (
+                                    <li key={index}>{bullet}</li>
+                                ))}
+                            </ul>
+
+                            <p className='text-xl font-bold mt-20'>{result.sub2}</p>
+
                             <div className="mt-6">
                                 {result.requiredSupplies && result.requiredSupplies.length > 0 && (
                                     <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>

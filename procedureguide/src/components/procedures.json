@@ -30,12 +30,17 @@
 
     {
         "id": 4,
-        "name": "Se",
-        "instructions": "Date Sputum to be performed by patient\n hellow",
+        "name": "Sputum Instructions",
+        "subtitle": "Morning Sputum Collection Instructions:",
+        "subtitle2": "Sputum Instruction for Patient",
+        "bulletPoints": [
+            "Arrive at the lab with your appointment confirmation.",
+            "Ensure you are fasting for 12 hours before the test.",
+            "Follow the lab technician’s instructions for sample collection."
+          ],
         "supplies": ["Bag","Tube", "Public Health Specimen Form", "Requisition Lab Slip"],
         "images":["bag.png", "tube.png", "specimen_form.png"],
-        "fullImage": "logo192.png",
-        "video" : "https://www.youtube.com/embed/mOdSV1gClOM"
+        "fullImage": "logo192.png"
     },
 
     {
