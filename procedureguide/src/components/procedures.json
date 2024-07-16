@@ -32,9 +32,15 @@
         "id": 4,
         "name": "Se",
         "instructions": "Date Sputum to be performed by patient\n hellow",
-        "supplies": ["Bag","tube", "Public Health Specimen Form", "Requisition Lab Slip"],
+        "supplies": ["Bag","Tube", "Public Health Specimen Form", "Requisition Lab Slip"],
         "images":["bag.png", "tube.png", "specimen_form.png"],
         "fullImage": "logo192.png",
         "video" : "https://www.youtube.com/embed/mOdSV1gClOM"
+    },
+
+    {
+        "id": 5,
+        "name": "ER Transportation",
+        "instructions": "To perform a glucose test, first prepare your glucose meter and insert a test strip if needed. Clean your finger with an alcohol swab and let it dry. Use a lancing device to prick the side of your fingertip and gently squeeze to obtain a drop of blood. Use the second drop of blood for testing. Apply the second drop to the test strip according to the meter’s instructions and wait for the meter to display your blood glucose level."
     }
 ]
