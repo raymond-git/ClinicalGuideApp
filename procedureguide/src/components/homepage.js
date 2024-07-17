@@ -22,7 +22,10 @@ const Homepage = () => {
             videoUrl: procedure.video,
             sub: procedure.subtitle,
             sub2: procedure.subtitle2,
-            bulletPoints: procedure.bulletPoints
+            sub3: procedure.subtitle3,
+            sub4: procedure.subtitle4,
+            bulletPoints: procedure.bulletPoints,
+            bulletPoints2: procedure.bulletPoints2
         }));
 
         // Update state with filtered and extracted results
@@ -61,14 +64,22 @@ const Homepage = () => {
                     {searchResults.map(result => (
                         <div key={result.id}>
                             <p className='text-4xl font-bold'>{result.procedureName}</p>
-                            <p className='text-xl font-bold mt-20'>{result.sub}</p>
+                            <p className='text-xl font-bold mt-16'>{result.sub}</p>
                             <ul className='mt-4' style={{ listStyleType: 'disc', paddingLeft: '1em' }}>
                                 {result.bulletPoints.map((bullet, index) => (
                                     <li key={index}>{bullet}</li>
                                 ))}
                             </ul>
+                            <p className='text-xl font-bold mt-16'>{result.sub2}</p>
+                            <ul className='mt-4' style={{ listStyleType: 'disc', paddingLeft: '1em' }}>
+                                {result.bulletPoints2.map((bullet, index) => (
+                                    <li key={index}>{bullet}</li>
+                                ))}
+                            </ul>
 
-                            <p className='text-xl font-bold mt-20'>{result.sub2}</p>
+                            <p className='text-xl font-bold mt-16'>{result.sub4}</p>
+                            <p className='text-xl font-bold mt-16'>{result.sub3}</p>
+
 
                             <div className="mt-6">
                                 {result.requiredSupplies && result.requiredSupplies.length > 0 && (

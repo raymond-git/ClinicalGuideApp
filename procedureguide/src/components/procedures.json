@@ -32,15 +32,23 @@
         "id": 4,
         "name": "Sputum Instructions",
         "subtitle": "Morning Sputum Collection Instructions:",
-        "subtitle2": "Sputum Instruction for Patient",
+        "subtitle2": "Sputum Sample Collection Date",
+        "subtitle3": "Supplies Needed for the Patient",
+        "subtitle4": "Medical Assistant Guide: Preparing Sputum for Patients",
         "bulletPoints": [
             "Collect sputum immediately after waking up.",
             "Do not brush your teeth or drink water beforehand.",
             "Ensure sputum (not saliva) reaches the line 5 mark on the tube.",
-            "If needed, keep coughing until the mucus reaches the line."
+            "If needed, keep coughing until the mucus reaches the line.",
+            "After collecting the mucus, place the sputum sample and the requisition form in the provided bag.",
+            "Store the bag in a regular refrigerator."
+        ],
+        "bulletPoints2": [
+            "Sunday, Monday, and Tuesday (Drop off on Tuesday at clinic)",
+            "Tuesday, Wednesday, and Thursday (Drop off on Thursday at clinic)"
         ],
         "supplies": ["Bag","Tube", "Public Health Specimen Form", "Requisition Lab Slip"],
-        "images":["bag.png", "tube.png", "specimen_form.png"],
+        "images":["bag.png", "tube.png", "specimen_form.png", "requisition.png"],
         "fullImage": "logo192.png"
     },
 
