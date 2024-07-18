@@ -24,8 +24,14 @@ const Homepage = () => {
             sub2: procedure.subtitle2,
             sub3: procedure.subtitle3,
             sub4: procedure.subtitle4,
+            subHead: procedure.subheading,
+            subHead2: procedure.subheading2,
+            subHead3: procedure.subheading3,
             bulletPoints: procedure.bulletPoints,
-            bulletPoints2: procedure.bulletPoints2
+            bulletPoints2: procedure.bulletPoints2,
+            bulletPoints3: procedure.bulletPoints3,
+            bulletPoints4: procedure.bulletPoints4,
+            bulletPoints5: procedure.bulletPoints5,
         }));
 
         // Update state with filtered and extracted results
@@ -64,22 +70,68 @@ const Homepage = () => {
                     {searchResults.map(result => (
                         <div key={result.id}>
                             <p className='text-4xl font-bold'>{result.procedureName}</p>
-                            <p className='text-xl font-bold mt-16'>{result.sub}</p>
-                            <ul className='mt-4' style={{ listStyleType: 'disc', paddingLeft: '1em' }}>
-                                {result.bulletPoints.map((bullet, index) => (
-                                    <li key={index}>{bullet}</li>
-                                ))}
-                            </ul>
-                            <p className='text-xl font-bold mt-16'>{result.sub2}</p>
-                            <ul className='mt-4' style={{ listStyleType: 'disc', paddingLeft: '1em' }}>
-                                {result.bulletPoints2.map((bullet, index) => (
-                                    <li key={index}>{bullet}</li>
-                                ))}
-                            </ul>
-
-                            <p className='text-xl font-bold mt-16'>{result.sub4}</p>
+                            {result.sub && (
+                                <div>
+                                    <p className='text-xl font-bold mt-16'>{result.sub2}</p>
+                                    {result.bulletPoints && result.bulletPoints.length > 0 && (
+                                        <ul className='mt-4' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
+                                            {result.bulletPoints.map((bullet, index) => (
+                                                <li key={index}>{bullet}</li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
+                            )}
+                            {result.sub2 && (
+                                <div>
+                                    <p className='text-xl font-bold mt-16'>{result.sub2}</p>
+                                    {result.bulletPoints2 && result.bulletPoints2.length > 0 && (
+                                        <ul className='mt-4' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
+                                            {result.bulletPoints2.map((bullet, index) => (
+                                                <li key={index}>{bullet}</li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
+                            )}
+                            {result.sub4 && (
+                                <div>
+                                    <p className='text-xl font-bold mt-16'>{result.sub4}</p>
+                                    {result.subHead && <p className='mt-4'>{result.subHead}</p>}
+                                    {result.bulletPoints3 && result.bulletPoints3.length > 0 && (
+                                        <ul className='mt-2' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
+                                            {result.bulletPoints3.map((bullet, index) => (
+                                                <li key={index}>{bullet}</li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
+                            )}
+                            {result.subHead2 && (
+                                <div>
+                                    <p className='mt-8'>{result.subHead2}</p>
+                                    {result.bulletPoints4 && result.bulletPoints4.length > 0 && (
+                                        <ul className='mt-2' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
+                                            {result.bulletPoints4.map((bullet, index) => (
+                                                <li key={index}>{bullet}</li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
+                            )}
+                            {result.subHead3 && (
+                                <div>
+                                    <p className='mt-8'>{result.subHead3}</p>
+                                    {result.bulletPoints5 && result.bulletPoints5.length > 0 && (
+                                        <ul className='mt-2' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
+                                            {result.bulletPoints5.map((bullet, index) => (
+                                                <li key={index}>{bullet}</li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
+                            )}
                             <p className='text-xl font-bold mt-16'>{result.sub3}</p>
-
 
                             <div className="mt-6">
                                 {result.requiredSupplies && result.requiredSupplies.length > 0 && (
@@ -109,8 +161,6 @@ const Homepage = () => {
                                     <p className='mt-32 text-4xl font-bold'></p>
                                 )}
                             </div>
-
-
                             {result.videoUrl && result.videoUrl.length !== 0 && (
                                 <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 flex items-stretch gap-4'>
                                     <div className="border-3 mt-20 flex justify-center video-container">

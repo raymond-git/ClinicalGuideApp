@@ -32,9 +32,12 @@
         "id": 4,
         "name": "Sputum Instructions",
         "subtitle": "Morning Sputum Collection Instructions:",
-        "subtitle2": "Sputum Sample Collection Date",
+        "subtitle2": "Patient's Sputum Sample Collection Date",
         "subtitle3": "Supplies Needed for the Patient",
         "subtitle4": "Medical Assistant Guide: Preparing Sputum for Patients",
+        "subheading": "Grab 3 Specimen Bags: Each bag should contain",
+        "subheading2": "Label the Sputum Tubes:",
+        "subheading3": "Documentation:",
         "bulletPoints": [
             "Collect sputum immediately after waking up.",
             "Do not brush your teeth or drink water beforehand.",
@@ -46,6 +49,20 @@
         "bulletPoints2": [
             "Sunday, Monday, and Tuesday (Drop off on Tuesday at clinic)",
             "Tuesday, Wednesday, and Thursday (Drop off on Thursday at clinic)"
+        ],
+        "bulletPoints3": [
+            "A sputum tube",
+            "A requisition lab form",
+            "A completed public health form signed by the doctor",
+            "Label each bag with the numbers 1, 2, and 3, as well as the collection date."
+        ],
+        "bulletPoints4": [
+            "Include the patient's first and last name",
+            "Date of Birth (DOB)",
+            "The corresponding day number (1, 2, or 3)"
+        ],
+        "bulletPoints5": [
+            "Place a copy of the public health form in the medical records box for scanning"
         ],
         "supplies": ["Bag","Tube", "Public Health Specimen Form", "Requisition Lab Slip"],
         "images":["bag.png", "tube.png", "specimen_form.png", "requisition.png"],
