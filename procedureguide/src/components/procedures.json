@@ -13,10 +13,10 @@
     {
         "id": 2,
         "name": "Hemoglobin",
-        "instructions": "Puncture the finger with a lancet and obtain 2-3 DROPS of blood",
+        "instructions": "Puncture the finger with a lancet and obtain \"3rd drop\" of blood",
         "supplies": ["Bandaid","Cotton Ball", "Alcohol Wipe", "Blue Lancet", "Cuvettes Prick", "Blue Hemoglobin Machine"],
-        "images":["bandaid.png", "cottonball.png", "alcoholwipe.png", "lancet.png"],
-        "fullImage": "logo192.png",
+        "images":["bandaid.png", "cottonball.png", "alcoholwipe.png", "lancet.png", "cuvettesPrick.png", "hemoglobinMachine.png"],
+        "fullImage": "hemoglobinsetup.png",
         "video" : "https://www.youtube.com/embed/mOdSV1gClOM"
         
     },
@@ -103,5 +103,16 @@
             "Address: 835 Webster Street Oakland CA 94607, Rolland & Kathryne Lowe Medical Center",
             "Special Equipment: Sometimes they ask if patient needs special equipment, confirm with doctor"
         ]
+    },
+
+    {
+        "id": 7,
+        "name": "Knee Injection",
+        "instructions":"Ensure all items are in the procedure cart. Note that Kenalog-10 and Kenalog-40 are for \"ONE-TIME USE ONLY\"; discard them after the doctor has finished. For Lidocaine bottles, write the expiration date after opening. Record the open date and the expiration date, which is 28 days later.",
+        "supplies": ["Kenalog-10", "Kenalog-40", "Lidocaine HCI", "Xylocaine HCI with Epinephrine"],
+        "images":["kenalog10.png", "kenalog40.png", "lidocaineHCI.png", "xylocaineHCI.png"],
+        "fullImage": "kneeinjectionsetup.png",
+        "video": "https://www.youtube.com/embed/BxvDmjRG8dM"
+        
     }
 ]
