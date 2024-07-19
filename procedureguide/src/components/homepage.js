@@ -18,6 +18,7 @@ const Homepage = () => {
             requiredSupplies: procedure.supplies,
             imageUrls: procedure.images,
             procedureName: procedure.name,
+            procedureSecondaryName: procedure.secondaryName,
             fullImageUrl: procedure.fullImage,
             videoUrl: procedure.video,
             sub: procedure.subtitle,
@@ -70,69 +71,62 @@ const Homepage = () => {
                     {searchResults.map(result => (
                         <div key={result.id}>
                             <p className='text-4xl font-bold'>{result.procedureName}</p>
-                            {result.sub && (
-                                <div>
-                                    <p className='text-xl font-bold mt-16'>{result.sub2}</p>
-                                    {result.bulletPoints && result.bulletPoints.length > 0 && (
-                                        <ul className='mt-4' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
-                                            {result.bulletPoints.map((bullet, index) => (
-                                                <li key={index}>{bullet}</li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </div>
+                            {result.instructions && result.instructions.length > 0 && (
+                                <p className='mt-20 text-lg'>{result.instructions}</p>
                             )}
-                            {result.sub2 && (
-                                <div>
-                                    <p className='text-xl font-bold mt-16'>{result.sub2}</p>
-                                    {result.bulletPoints2 && result.bulletPoints2.length > 0 && (
-                                        <ul className='mt-4' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
-                                            {result.bulletPoints2.map((bullet, index) => (
-                                                <li key={index}>{bullet}</li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </div>
-                            )}
-                            {result.sub4 && (
-                                <div>
-                                    <p className='text-xl font-bold mt-16'>{result.sub4}</p>
-                                    {result.subHead && <p className='mt-4'>{result.subHead}</p>}
-                                    {result.bulletPoints3 && result.bulletPoints3.length > 0 && (
-                                        <ul className='mt-2' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
-                                            {result.bulletPoints3.map((bullet, index) => (
-                                                <li key={index}>{bullet}</li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </div>
-                            )}
-                            {result.subHead2 && (
-                                <div>
-                                    <p className='mt-8'>{result.subHead2}</p>
-                                    {result.bulletPoints4 && result.bulletPoints4.length > 0 && (
-                                        <ul className='mt-2' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
-                                            {result.bulletPoints4.map((bullet, index) => (
-                                                <li key={index}>{bullet}</li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </div>
-                            )}
-                            {result.subHead3 && (
-                                <div>
-                                    <p className='mt-8'>{result.subHead3}</p>
-                                    {result.bulletPoints5 && result.bulletPoints5.length > 0 && (
-                                        <ul className='mt-2' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
-                                            {result.bulletPoints5.map((bullet, index) => (
-                                                <li key={index}>{bullet}</li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </div>
-                            )}
-                            <p className='text-xl font-bold mt-16'>{result.sub3}</p>
 
+                            <div>
+                                <p className='text-xl font-bold mt-16'>{result.sub}</p>
+                                {result.bulletPoints && result.bulletPoints.length > 0 && (
+                                    <ul className='mt-4' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
+                                        {result.bulletPoints.map((bullet, index) => (
+                                            <li key={index}>{bullet}</li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
+                            <div>
+                                <p className='text-xl font-bold mt-16'>{result.sub2}</p>
+                                {result.bulletPoints2 && result.bulletPoints2.length > 0 && (
+                                    <ul className='mt-4' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
+                                        {result.bulletPoints2.map((bullet, index) => (
+                                            <li key={index}>{bullet}</li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
+                            <div>
+                                <p className='text-xl font-bold mt-16'>{result.sub3}</p>
+                                {result.subHead && <p className='mt-4'>{result.subHead}</p>}
+                                {result.bulletPoints3 && result.bulletPoints3.length > 0 && (
+                                    <ul className='mt-2' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
+                                        {result.bulletPoints3.map((bullet, index) => (
+                                            <li key={index}>{bullet}</li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
+                            <div>
+                                <p className='mt-8'>{result.subHead2}</p>
+                                {result.bulletPoints4 && result.bulletPoints4.length > 0 && (
+                                    <ul className='mt-2' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
+                                        {result.bulletPoints4.map((bullet, index) => (
+                                            <li key={index}>{bullet}</li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
+                            <div>
+                                <p className='mt-8'>{result.subHead3}</p>
+                                {result.bulletPoints5 && result.bulletPoints5.length > 0 && (
+                                    <ul className='mt-2' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
+                                        {result.bulletPoints5.map((bullet, index) => (
+                                            <li key={index}>{bullet}</li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
+                            <p className='text-xl font-bold mt-16'>{result.sub4}</p>
                             <div className="mt-6">
                                 {result.requiredSupplies && result.requiredSupplies.length > 0 && (
                                     <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
