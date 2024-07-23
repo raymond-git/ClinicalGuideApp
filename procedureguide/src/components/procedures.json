@@ -114,5 +114,22 @@
         "fullImage": "kneeinjectionsetup.png",
         "video": "https://www.youtube.com/embed/BxvDmjRG8dM"
         
+    },
+
+    {
+        "id": 8,
+        "name": "Staple Removal",
+        "instructions": "Retrieve a \"Skin Staple Remover\" from the inventory room for the doctor. Please note that it is for \"SINGLE USE ONLY\" and should be discarded after the doctor has finished using it.",
+        "supplies": ["Staple Remover Front View", "Staple Remove Back View"],
+        "images":["stapleremoverfront.png", "stapleremoverback.png"]
+    },
+
+    {
+    
+        "id": 9,
+        "name": "IUD Removal",
+        "instructions": "Retrieve a \"Skin Staple Remover\" from the inventory room for the doctor. Please note that it is for \"SINGLE USE ONLY\" and should be discarded after the doctor has finished using it.",
+        "supplies": ["Ring Forcep", "Lubricant Bottle", "Speculum", "Drape"],
+        "images":["ringforcep.png", "lubricantbottle.png", "speculum.png", "drape.png"]
     }
 ]
