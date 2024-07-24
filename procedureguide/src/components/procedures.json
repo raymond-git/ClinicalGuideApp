@@ -72,20 +72,6 @@
 
     {
         "id": 5,
-        "name": "ER Taxi",
-        "subtitle": "Instructions for Taxi Arrangements to Hospital:",
-        "bulletPoints": [
-            "Double-check with the patient before calling the taxi to ensure they still want it, as plans can change.",
-            "Confirm the hospital name with the doctor (e.g., \"Summit ER Hospital\").",
-            "Get a taxi voucher and form from the nursing room on the 2nd floor. Tear off the first page for the driver after finished filling in and keep the second slip for records.",
-            "Call a taxi and specify \"Summit Hospital\" as the destination. If asked about payment, mention it's a taxi voucher. Provide the phone number (510) 318-5800 or clinic address if needed.",
-            "Ask the PSR to print the face sheet and referral, and I will print the signed progress note (indicated by a check mark) to give to the patient.",
-            "Inform downstairs PSR and receptionist (extension 5801) about the taxi arriving to pick up the patient."
-        ]
-    },
-
-    {
-        "id": 6,
         "name": "ER",
         "subtitle": "Instructions for (Taxi) Arrangements to Hospital:",
         "subtitle2": "Instructions for (Transportation) Arrangements to Hospital:",
@@ -106,7 +92,7 @@
     },
 
     {
-        "id": 7,
+        "id": 6,
         "name": "Knee Injection",
         "instructions":"Ensure all items are in the procedure cart. Note that Kenalog-10 and Kenalog-40 are for \"ONE-TIME USE ONLY\"; discard them after the doctor has finished. For Lidocaine bottles, write the expiration date after opening. Record the open date and the expiration date, which is 28 days later.",
         "supplies": ["Kenalog-10", "Kenalog-40", "Lidocaine HCI", "Xylocaine HCI with Epinephrine"],
@@ -117,7 +103,7 @@
     },
 
     {
-        "id": 8,
+        "id": 7,
         "name": "Staple Removal",
         "instructions": "Retrieve a \"Skin Staple Remover\" from the inventory room for the doctor. Please note that it is for \"SINGLE USE ONLY\" and should be discarded after the doctor has finished using it.",
         "supplies": ["Staple Remover Front View", "Staple Remove Back View"],
@@ -126,9 +112,9 @@
 
     {
     
-        "id": 9,
+        "id": 8,
         "name": "IUD Removal",
-        "instructions": "Retrieve a \"Skin Staple Remover\" from the inventory room for the doctor. Please note that it is for \"SINGLE USE ONLY\" and should be discarded after the doctor has finished using it.",
+        "instructions": "",
         "supplies": ["Ring Forcep", "Lubricant Bottle", "Speculum", "Drape"],
         "images":["ringforcep.png", "lubricantbottle.png", "speculum.png", "drape.png"]
     }
