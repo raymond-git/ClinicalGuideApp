@@ -115,7 +115,16 @@
         "id": 8,
         "name": "IUD Removal",
         "instructions": "",
-        "supplies": ["Ring Forcep", "Lubricant Bottle", "Speculum", "Drape"],
-        "images":["ringforcep.png", "lubricantbottle.png", "speculum.png", "drape.png"]
+        "supplies": ["Ring Forcep", "Lubricant Bottle", "Speculum", "Drape", "Cotton Swabs"],
+        "images":["ringforcep.png", "lubricantbottle.png", "speculum.png", "drape.png", "cottonswabs.png"]
+    },
+
+    {
+    
+        "id": 9,
+        "name": "IUD Setup",
+        "instructions": "",
+        "supplies": ["IUD Sterile Set", "Sterile Field", "Pad", "Sterile Gauze 2x2", "Drape",  "Extra Sterile Bag of Cotton Swab", "Lubricant Jelly", "Povidone/Betadine(Fill to 1/4 Cup)",  "Povidone Setup", "IUD Device: Mirena or Paraguard"],
+        "images":["iudsterileset.png", "sterilefield.png", "pad.png", "sterilegauze2x2.png", "drape.png", "cottonswabset.png", "lubricantjelly.png", "povidone.png", "povidonesetup.png"]
     }
 ]
