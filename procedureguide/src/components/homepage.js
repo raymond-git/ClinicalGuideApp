@@ -75,6 +75,7 @@ const Homepage = () => {
                                 <p className='mt-20 text-lg'>{result.instructions}</p>
                             )}
 
+                           {/* ER Section*/}
                             <div>
                                 <p className='text-xl font-bold mt-16'>{result.sub}</p>
                                 {result.bulletPoints && result.bulletPoints.length > 0 && (
@@ -95,6 +96,8 @@ const Homepage = () => {
                                     </ul>
                                 )}
                             </div>
+                            {/* ************* */}
+                            
                             <div>
                                 <p className='text-xl font-bold mt-16'>{result.sub3}</p>
                                 {result.subHead && <p className='mt-4'>{result.subHead}</p>}
@@ -127,9 +130,11 @@ const Homepage = () => {
                                 )}
                             </div>
                             <p className='text-xl font-bold mt-16'>{result.sub4}</p>
+
+                            
                             <div className="mt-6">
                                 {result.requiredSupplies && result.requiredSupplies.length > 0 && (
-                                    <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+                                    <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14'>
                                         {result.requiredSupplies.map((supply, index) => (
                                             <div key={index} className="card">
                                                 <div className="relative">
@@ -137,8 +142,9 @@ const Homepage = () => {
                                                         <img key={index} src={result.imageUrls[index]} className="card-img-top object-cover h-64 w-full" alt={`${supply}`} />
                                                     )}
                                                 </div>
-                                                <div className="card-body border-2 flex justify-center py-2">
-                                                    <p className="card-text lg:text-sm">{supply}</p>
+                                                
+                                                <div className="card-body flex justify-center py-2">
+                                                    <p className="card-text text-lg">{supply}</p>
                                                 </div>
                                             </div>
                                         ))}
@@ -147,7 +153,7 @@ const Homepage = () => {
                             </div>
 
                             {/* If no videos are found during the search, title will not be available */}
-                            <div>
+                            {/* <div>
                                 {result.videoUrl && result.videoUrl !== 0 && (
                                     <p className='mt-32 text-4xl font-bold'>Test Overview and Visual Setup Reference</p>
                                 )}
@@ -168,7 +174,7 @@ const Homepage = () => {
                                         </div>
                                     </div>
                                 </div>
-                            )}
+                            )} */}
                         </div>
                     ))}
                 </div>

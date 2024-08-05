@@ -75,6 +75,7 @@
         "name": "ER",
         "subtitle": "Instructions for (Taxi) Arrangements to Hospital:",
         "subtitle2": "Instructions for (Transportation) Arrangements to Hospital:",
+        "images": ["bag.png"],
         "bulletPoints": [
             "Double-check with the patient before calling the taxi to ensure they still want it, as plans can change",
             "Confirm the hospital name with the doctor (e.g., \"Summit ER Hospital\")",
