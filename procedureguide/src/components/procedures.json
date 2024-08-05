@@ -12,14 +12,25 @@
 
     {
         "id": 2,
-        "name": "Hemoglobin",
-        "instructions": "Puncture the finger with a lancet and obtain \"3rd drop\" of blood",
-        "supplies": ["Bandaid","Cotton Ball", "Alcohol Wipe", "Blue Lancet", "Cuvettes Prick", "Blue Hemoglobin Machine"],
-        "images":["bandaid.png", "cottonball.png", "alcoholwipe.png", "lancet.png", "cuvettesPrick.png", "hemoglobinMachine.png"],
-        "fullImage": "hemoglobinsetup.png",
-        "video" : "https://www.youtube.com/embed/mOdSV1gClOM"
-        
+        "name": "ER",
+        "subtitle": "Instructions for (Taxi) Arrangements to Hospital:",
+        "subtitle2": "Instructions for (Transportation) Arrangements to Hospital:",
+        "bulletPoints": [
+            "Double-check with the patient before calling the taxi to ensure they still want it, as plans can change",
+            "Confirm the hospital name with the doctor (e.g., \"Summit ER Hospital\")",
+            "Get a taxi voucher form from the nursing room on the 2nd floor, if not 3rd floor. Tear off the first page for the driver after finished filling in and keep the second slip for records",
+            "Call a taxi and specify \"Summit Hospital\" as the destination. If asked about payment, mention it's a taxi voucher. Provide the phone number (510) 318-5800 or clinic address if needed",
+            "Ask the PSR to print the face sheet and referral, and I will print the signed progress note (indicated by a check mark) to give to the patient",
+            "Inform downstairs PSR and receptionist (extension 5801) about the taxi arriving to pick up the patient"
+        ],
+        "bulletPoints2": [
+            "Ask the provider the reason the patient is going to the ER",
+            "Call (510) 444-1616 requesting for transportation ONLY",
+            "Address: 835 Webster Street Oakland CA 94607, Rolland & Kathryne Lowe Medical Center",
+            "Special Equipment: Sometimes they ask if patient needs special equipment, confirm with doctor"
+        ]
     },
+
 
     {
         "id": 3,
@@ -30,6 +41,71 @@
 
     {
         "id": 4,
+        "name": "Hemoglobin",
+        "instructions": "Puncture the finger with a lancet and obtain \"3rd drop\" of blood",
+        "supplies": ["Bandaid","Cotton Ball", "Alcohol Wipe", "Blue Lancet", "Cuvettes Prick", "Blue Hemoglobin Machine"],
+        "images":["bandaid.png", "cottonball.png", "alcoholwipe.png", "lancet.png", "cuvettesPrick.png", "hemoglobinMachine.png"],
+        "fullImage": "hemoglobinsetup.png",
+        "video" : "https://www.youtube.com/embed/mOdSV1gClOM"
+        
+    },
+
+    {
+    
+        "id": 5,
+        "name": "IUD Removal",
+        "instructions": "",
+        "supplies": ["Ring Forcep", "Lubricant Bottle", "Speculum", "Drape", "Cotton Swabs"],
+        "images":["ringforcep.png", "lubricantbottle.png", "speculum.png", "drape.png", "cottonswabs.png"]
+    },
+
+    {
+        "id": 6,
+        "name": "IUD Setup",
+        "instructions": "",
+        "supplies": ["IUD Sterile Set", "Sterile Field", "Pad", "Sterile Gauze 2x2", "Drape",  "Extra Sterile Bag of Cotton Swab", "Lubricant Jelly", "Povidone/Betadine(Fill to 1/4 Cup)",  "Povidone Setup", "IUD Device: Mirena or Paraguard"],
+        "images":["iudsterileset.png", "sterilefield.png", "pad.png", "sterilegauze2x2.png", "drape.png", "cottonswabset.png", "lubricantjelly.png", "povidone.png", "povidonesetup.png"],
+        "bulletPoints": [
+            "IUD Sterile Set: Located in the left cabinet on the far side of the utility room",
+            "Sterile Field: Central section of the cabinet high above within the utility room",
+            "Pad: In the exam room, under the bed where you'll see all the speculums.",
+            "Sterile Gauze 2x2: Central section of the back room's far left side",
+            "Drape: In the exam room, in one of those cabinets below",
+            "Extra Sterile Bag of Cotton Swab: Central section of the utility room where you find all of the procedure tools",
+            "Lubricant Jelly: In the exam room, in one of those cabinets above",
+            "Povidone/Betadine: In the exam room, in one of those cabinets above",
+            "IUD Device: Mirena or Paraguard: Right section of the cabinet within the utility room"
+        ]
+    },
+
+    {
+        "id": 7,
+        "name": "Knee Injection",
+        "instructions":"Ensure all items are in the procedure cart. Note that Kenalog-10 and Kenalog-40 are for \"ONE-TIME USE ONLY\"; discard them after the doctor has finished. For Lidocaine bottles, write the expiration date after opening. Record the open date and the expiration date, which is 28 days later.",
+        "supplies": ["Kenalog-10", "Kenalog-40", "Lidocaine HCI", "Xylocaine HCI with Epinephrine", "Procedure Cart"],
+        "images":["kenalog10.png", "kenalog40.png", "lidocaineHCI.png", "xylocaineHCI.png"],
+        "fullImage": "kneeinjectionsetup.png",
+        "video": "https://www.youtube.com/embed/BxvDmjRG8dM"
+        
+    },
+
+    {
+        "id": 8,
+        "name": "Salmonella",
+        "supplies": ["Para-Pak"],
+        "images":["salmonella.png"]
+    },
+
+    {
+        "id": 9,
+        "name": "Staple Removal",
+        "instructions": "Retrieve a \"Skin Staple Remover\" from the inventory room for the doctor. Please note that it is for \"SINGLE USE ONLY\" and should be discarded after the doctor has finished using it.",
+        "supplies": ["Staple Remover Front View", "Staple Remove Back View"],
+        "images":["stapleremoverfront.png", "stapleremoverback.png"]
+    },
+
+    {
+        "id": 10,
         "name": "Sputum Instructions",
         "subtitle": "Morning Sputum Collection Instructions:",
         "subtitle2": "Patient's Sputum Sample Collection Date",
@@ -75,7 +151,6 @@
         "name": "ER",
         "subtitle": "Instructions for (Taxi) Arrangements to Hospital:",
         "subtitle2": "Instructions for (Transportation) Arrangements to Hospital:",
-        "images": ["bag.png"],
         "bulletPoints": [
             "Double-check with the patient before calling the taxi to ensure they still want it, as plans can change",
             "Confirm the hospital name with the doctor (e.g., \"Summit ER Hospital\")",
