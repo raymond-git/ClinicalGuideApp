@@ -1,15 +1,97 @@
 [
     {
         "id": 1,
-        "name": "A1C",
-        "instructions":"Puncture the finger with a lancet to obtain the \"FIRST DROP\" of blood",
-        "supplies": ["Bandaid", "Cotton Ball", "Alcohol Wipe", "Blue Lancet", "DCA HbA1c Regent Kit"],
-        "images":["bandaid.png", "cottonball.png", "alcoholwipe.png", "lancet.png", "hba1ckit.png"],
-        "fullImage": "a1csetup.png",
-        "video": "https://www.youtube.com/embed/BxvDmjRG8dM"
-        
+        "name": "Anal Exam Tray Set Up",
+        "fullImage": "analexam.jpg",
+        "instructions": [
+            "Lubricant",
+            "Analscope (disposable)",
+            "Gloves",
+            "Hemocult Kit",
+            "Hemocult Developer /15 mL liquid"
+        ]
     },
 
+    {
+        "id": 2,
+        "name": "Group B Step (GBS) Swab Tray",
+        "fullImage": "gbs.jpg",
+        "instructions": [
+            "Undress waist down",
+            "Give Drape to cover",
+            "Blue cap GBS sample kit",
+            "Gloves"
+        ]
+    },
+
+    {
+        "id": 3,
+        "name": "Endocervical Female GC/CT Test",
+        "fullImage": "gcctfemale.jpg",
+        "instructions": [
+            "Show swab package open and swab stick 1/2 exposure"
+        ]
+    },
+
+    {
+        "id": 4,
+        "name": "Male Urethral Swab GC/CT Test",
+        "fullImage": "gcctmale.jpg",
+        "instructions": [
+            "Show swab package open and swab stick 1/2 exposure"
+        ]
+    },
+
+    {
+        "id": 5,
+        "name": "Throat or Rectal GC/CT Test",
+        "fullImage": "gcctthroatrectal.jpg",
+        "instructions": [
+            "Show swab package open and swab stick 1/2 exposure",
+            "Ensure that each tube is labeled with the appropriate stickers - \"Throat\" or \"Rectal\" - if both types of tests are being conducted"
+        ]
+    },
+
+    {
+        "id": 6,
+        "name": "Urine GC/CT for Quest",
+        "fullImage": "gccturine.jpg",
+        "instructions": [
+            "Gloves",
+            "Plastic pipette to transfer",
+            "Dirty catch urine(first stream) in Quest cup",
+            "Fill the \"Apitma Urine Tube\" with urine to the level between the fill area window markers"
+        ]
+    },
+
+    {
+        "id": 7,
+        "name": "PAP - Thin Prep Set",
+        "fullImage": "papthinprep.jpg",
+        "instructions": [
+            "Container for the thin prep jar",
+            "Brush, Broom, Spatula",
+            "PAP Test Lubricant",
+            "Speculum Regular",
+            "Gloves",
+            "2 Cotton Swabs",
+            "Instruct patient to undress from waist down and use papoer drape to cover"
+        ]
+    },
+
+    {
+        "id": 8,
+        "name": "Plantar Wart Tray Set Up",
+        "fullImage": "plantarwart.jpg",
+        "instructions": [
+            "Sprayer with Liquid Nitrogen filled to 1/4",
+            "Splash guard shield" 
+        ]
+    },
+
+
+
+    
     {
         "id": 2,
         "name": "ER",

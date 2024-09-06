@@ -7,36 +7,42 @@ const Homepage = () => {
 
     const handleSearchClick = () => {
         // Filter procedures based on search term
-        const filteredResults = proceduresData.filter(procedure =>
-            procedure.name.toLowerCase() === (searchTerm.toLowerCase())
-        );
+        const filteredResults = proceduresData.filter(procedure => procedure.name.toLowerCase() === (searchTerm.toLowerCase()));
 
-        // Extract id, name, instructions, supplies, images, full image, and video only from filtered results
         const resultsToDisplay = filteredResults.map(procedure => ({
             procedureId: procedure.id,
-            instructions: procedure.instructions,
-            requiredSupplies: procedure.supplies,
-            imageUrls: procedure.images,
             procedureName: procedure.name,
-            procedureSecondaryName: procedure.secondaryName,
-            fullImageUrl: procedure.fullImage,
-            videoUrl: procedure.video,
-            sub: procedure.subtitle,
-            sub2: procedure.subtitle2,
-            sub3: procedure.subtitle3,
-            sub4: procedure.subtitle4,
-            subHead: procedure.subheading,
-            subHead2: procedure.subheading2,
-            subHead3: procedure.subheading3,
+            instructions: procedure.instructions,
+            imageUrls: procedure.fullImage,
             bulletPoints: procedure.bulletPoints,
-            bulletPoints2: procedure.bulletPoints2,
-            bulletPoints3: procedure.bulletPoints3,
-            bulletPoints4: procedure.bulletPoints4,
-            bulletPoints5: procedure.bulletPoints5,
         }));
 
         // Update state with filtered and extracted results
         setSearchResults(resultsToDisplay);
+
+        // Extract id, name, instructions, supplies, images, full image, and video only from filtered results
+        // const resultsToDisplay = filteredResults.map(procedure => ({
+        //     procedureId: procedure.id,
+        //     instructions: procedure.instructions,
+        //     requiredSupplies: procedure.supplies,
+        //     imageUrls: procedure.images,
+        //     procedureName: procedure.name,
+        //     procedureSecondaryName: procedure.secondaryName,
+        //     fullImageUrl: procedure.fullImage,
+        //     videoUrl: procedure.video,
+        //     sub: procedure.subtitle,
+        //     sub2: procedure.subtitle2,
+        //     sub3: procedure.subtitle3,
+        //     sub4: procedure.subtitle4,
+        //     subHead: procedure.subheading,
+        //     subHead2: procedure.subheading2,
+        //     subHead3: procedure.subheading3,
+        //     bulletPoints: procedure.bulletPoints,
+        //     bulletPoints2: procedure.bulletPoints2,
+        //     bulletPoints3: procedure.bulletPoints3,
+        //     bulletPoints4: procedure.bulletPoints4,
+        //     bulletPoints5: procedure.bulletPoints5,
+        // }));
 
     };
 
@@ -70,10 +76,26 @@ const Homepage = () => {
                 <div className="mt-20">
                     {searchResults.map(result => (
                         <div key={result.id}>
-                            <p className='text-4xl font-bold'>{result.procedureName}</p>
-                            {result.instructions && result.instructions.length > 0 && (
-                                <p className='mt-20 text-lg'>{result.instructions}</p>
-                            )}
+                            <p className='text-4xl font-bold mb-4'>{result.procedureName}</p>
+
+                            <div className=' max-w-4xl'>
+                                <img
+                                    className='object-contain h-full w-full'
+                                    src={result.imageUrls}
+                                    alt={result.procedureName}
+                                />
+                            </div>
+                            <ol className='text-xl mt-4 list-decimal pl-4'>
+                                {result.instructions.map((bullet, index) => (
+                                    <li key={index}>{bullet}</li>
+                                ))}
+                            </ol>
+
+      
+
+
+
+
 
                            {/* ER Section*/}
                             <div>
