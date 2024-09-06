@@ -50,6 +50,7 @@ const Homepage = () => {
         <div className='mx-20 md:mx-30 lg:mx-40 my-12'>
             <div className="mt-32">
                 <div className="font-bold text-center text-lg lg:text-5xl">Clinical Procedure Lookup</div>
+                <p className='mt-4'>Testing: Anal Exam Tray Set Up, Group B Step (GBS) Swab Tray, Endocervical Female GC/CT Test, Male Urethral Swab GC/CT Test, Throat or Rectal GC/CT Test, Urine GC/CT for Quest, PAP - Thin Prep Set, Plantar Wart Tray Set Up</p>
                 <div className="input-group mt-20">
                     <input
                         type="search"
