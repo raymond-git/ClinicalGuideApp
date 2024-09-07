@@ -12,8 +12,9 @@ const Homepage = () => {
         const resultsToDisplay = filteredResults.map(procedure => ({
             procedureId: procedure.id,
             procedureName: procedure.name,
-            instructions: procedure.instructions,
-            imageUrls: procedure.fullImage,
+            procedureInstructions: procedure.instructions,
+            procedureSpecialInstructions: procedure.specialInstructions,
+            procedureimageUrls: procedure.fullImage,
             bulletPoints: procedure.bulletPoints,
         }));
 
@@ -50,7 +51,8 @@ const Homepage = () => {
         <div className='mx-20 md:mx-30 lg:mx-40 my-12'>
             <div className="mt-32">
                 <div className="font-bold text-center text-lg lg:text-5xl">Clinical Procedure Lookup</div>
-                <p className='mt-4'>Testing: Anal Exam Tray Set Up, Group B Step (GBS) Swab Tray, Endocervical Female GC/CT Test, Male Urethral Swab GC/CT Test, Throat or Rectal GC/CT Test, Urine GC/CT for Quest, PAP - Thin Prep Set, Plantar Wart Tray Set Up</p>
+                <p className='text-xl text-rose-600 font-bold text-center mt-8 '>Testing Phase! Please copy each procedure listed below into the search bar to view the temporary results. Please leave no spacing!</p>
+                <p className='mt-8'>A1C, Endocervical Female GC/CT Test, Group B Step (GBS) Swab Tray, Hemoglobin, Male Urethral Swab GC/CT Test, PAP - Thin Prep Set, Plantar Wart Tray Set Up, Rectal Exam Tray Set Up, Stool C. diff, Stool Culture, Stool O&P, Throat or Rectal GC/CT Test, Urine GC/CT for Quest</p>
                 <div className="input-group mt-20">
                     <input
                         type="search"
@@ -82,17 +84,18 @@ const Homepage = () => {
                             <div className=' max-w-4xl'>
                                 <img
                                     className='object-contain h-full w-full'
-                                    src={result.imageUrls}
+                                    src={result.procedureimageUrls}
                                     alt={result.procedureName}
                                 />
                             </div>
                             <ol className='text-xl mt-4 list-decimal pl-4'>
-                                {result.instructions.map((bullet, index) => (
+                                {result.procedureInstructions.map((bullet, index) => (
                                     <li key={index}>{bullet}</li>
                                 ))}
                             </ol>
+                            <p className='text-xl mt-8'>{result.procedureSpecialInstructions}</p>
 
-      
+
 
 
 
