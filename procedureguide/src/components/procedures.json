@@ -180,7 +180,7 @@
 
 
     {
-        "id": 2,
+        "id": 14,
         "name": "ER",
         "subtitle": "Instructions for (Taxi) Arrangements to Hospital:",
         "subtitle2": "Instructions for (Transportation) Arrangements to Hospital:",
@@ -202,7 +202,7 @@
 
 
     {
-        "id": 3,
+        "id": 15,
         "name": "Glucose",
         "instructions": "To perform a glucose test, first prepare your glucose meter and insert a test strip if needed. Clean your finger with an alcohol swab and let it dry. Use a lancing device to prick the side of your fingertip and gently squeeze to obtain a drop of blood. Use the second drop of blood for testing. Apply the second drop to the test strip according to the meter’s instructions and wait for the meter to display your blood glucose level.",
         "supplies": ["Bandaid", "CottonBall", "Alcohol Wipe", "Red Glucometer", "HemoCue Glucose Cuvettes from the Fridge" ]
@@ -210,7 +210,7 @@
 
     {
     
-        "id": 5,
+        "id": 16,
         "name": "IUD Removal",
         "instructions": "",
         "supplies": ["Ring Forcep", "Lubricant Bottle", "Speculum", "Drape", "Cotton Swabs"],
@@ -218,7 +218,7 @@
     },
 
     {
-        "id": 6,
+        "id": 17,
         "name": "IUD Setup",
         "instructions": "",
         "supplies": ["IUD Sterile Set", "Sterile Field", "Pad", "Sterile Gauze 2x2", "Drape",  "Extra Sterile Bag of Cotton Swab", "Lubricant Jelly", "Povidone/Betadine(Fill to 1/4 Cup)",  "Povidone Setup", "IUD Device: Mirena or Paraguard"],
@@ -237,7 +237,7 @@
     },
 
     {
-        "id": 7,
+        "id": 18,
         "name": "Knee Injection",
         "instructions":"Ensure all items are in the procedure cart. Note that Kenalog-10 and Kenalog-40 are for \"ONE-TIME USE ONLY\"; discard them after the doctor has finished. For Lidocaine bottles, write the expiration date after opening. Record the open date and the expiration date, which is 28 days later.",
         "supplies": ["Kenalog-10", "Kenalog-40", "Lidocaine HCI", "Xylocaine HCI with Epinephrine", "Procedure Cart"],
@@ -248,14 +248,14 @@
     },
 
     {
-        "id": 8,
+        "id": 19,
         "name": "Salmonella",
         "supplies": ["Para-Pak"],
         "images":["salmonella.png"]
     },
 
     {
-        "id": 9,
+        "id": 20,
         "name": "Staple Removal",
         "instructions": "Retrieve a \"Skin Staple Remover\" from the inventory room for the doctor. Please note that it is for \"SINGLE USE ONLY\" and should be discarded after the doctor has finished using it.",
         "supplies": ["Staple Remover Front View", "Staple Remove Back View"],
@@ -263,7 +263,7 @@
     },
 
     {
-        "id": 10,
+        "id": 21,
         "name": "Sputum Instructions",
         "subtitle": "Morning Sputum Collection Instructions:",
         "subtitle2": "Patient's Sputum Sample Collection Date",

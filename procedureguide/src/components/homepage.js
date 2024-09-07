@@ -3,56 +3,54 @@ import proceduresData from '../components/procedures.json'; // Adjust path as ne
 
 const Homepage = () => {
     const [searchTerm, setSearchTerm] = useState('');
-    const [searchResults, setSearchResults] = useState([]);
+    const [filteredItems, setFilteredItems] = useState([]);
+    const [selectedItem, setSelectedItem] = useState(null);
 
-    const handleSearchClick = () => {
-        // Filter procedures based on search term
-        const filteredResults = proceduresData.filter(procedure => procedure.name.toLowerCase() === (searchTerm.toLowerCase()));
+    // Handle input change
+    const handleChange = (e) => {
+        const query = e.target.value;
+        setSearchTerm(query);
 
-        const resultsToDisplay = filteredResults.map(procedure => ({
-            procedureId: procedure.id,
-            procedureName: procedure.name,
-            procedureInstructions: procedure.instructions,
-            procedureSpecialInstructions: procedure.specialInstructions,
-            procedureimageUrls: procedure.fullImage,
-            bulletPoints: procedure.bulletPoints,
-        }));
+        if (query) {
+            // Filter procedures based on search term
+            const filteredResults = proceduresData.filter(procedure =>
+                procedure.name.toLowerCase().includes(searchTerm.toLowerCase())
+            );
 
-        // Update state with filtered and extracted results
-        setSearchResults(resultsToDisplay);
+            const resultsToDisplay = filteredResults.map(procedure => ({
+                procedureId: procedure.id,
+                procedureName: procedure.name,
+                procedureInstructions: procedure.instructions,
+                procedureSpecialInstructions: procedure.specialInstructions,
+                procedureImageUrls: procedure.fullImage,
+                bulletPoints: procedure.bulletPoints,
+            }));
 
-        // Extract id, name, instructions, supplies, images, full image, and video only from filtered results
-        // const resultsToDisplay = filteredResults.map(procedure => ({
-        //     procedureId: procedure.id,
-        //     instructions: procedure.instructions,
-        //     requiredSupplies: procedure.supplies,
-        //     imageUrls: procedure.images,
-        //     procedureName: procedure.name,
-        //     procedureSecondaryName: procedure.secondaryName,
-        //     fullImageUrl: procedure.fullImage,
-        //     videoUrl: procedure.video,
-        //     sub: procedure.subtitle,
-        //     sub2: procedure.subtitle2,
-        //     sub3: procedure.subtitle3,
-        //     sub4: procedure.subtitle4,
-        //     subHead: procedure.subheading,
-        //     subHead2: procedure.subheading2,
-        //     subHead3: procedure.subheading3,
-        //     bulletPoints: procedure.bulletPoints,
-        //     bulletPoints2: procedure.bulletPoints2,
-        //     bulletPoints3: procedure.bulletPoints3,
-        //     bulletPoints4: procedure.bulletPoints4,
-        //     bulletPoints5: procedure.bulletPoints5,
-        // }));
+            // Update state with filtered and extracted results
+            setFilteredItems(resultsToDisplay);
+        } else {
+            // Clear results if search term is empty when you back space
+            setFilteredItems([]);
+        }
+    };
 
+    // Handle item click
+    const handleItemClick = (item) => {
+        setSearchTerm(item.procedureName); // Optionally, set the search term to the clicked item's name
+        setSelectedItem(item); // Update selected item details
+        setFilteredItems([]); // Clear the suggestions
     };
 
     return (
         <div className='mx-20 md:mx-30 lg:mx-40 my-12'>
             <div className="mt-32">
                 <div className="font-bold text-center text-lg lg:text-5xl">Clinical Procedure Lookup</div>
-                <p className='text-xl text-rose-600 font-bold text-center mt-8 '>Testing Phase! Please copy each procedure listed below into the search bar to view the temporary results. Please leave no spacing!</p>
-                <p className='mt-8'>A1C, Endocervical Female GC/CT Test, Group B Step (GBS) Swab Tray, Hemoglobin, Male Urethral Swab GC/CT Test, PAP - Thin Prep Set, Plantar Wart Tray Set Up, Rectal Exam Tray Set Up, Stool C. diff, Stool Culture, Stool O&P, Throat or Rectal GC/CT Test, Urine GC/CT for Quest</p>
+                <p className='text-xl text-rose-600 font-bold text-center mt-8'>
+                    Testing Phase! Please type into the search bar to see suggestions and select an option below. Copying and pasting does not currently work!
+                </p>
+                <p className='mt-8'>
+                    A1C, Endocervical Female GC/CT Test, Group B Step (GBS) Swab Tray, Hemoglobin, Male Urethral Swab GC/CT Test, PAP - Thin Prep Set, Plantar Wart Tray Set Up, Rectal Exam Tray Set Up, Stool C. diff, Stool Culture, Stool O&P, Throat or Rectal GC/CT Test, Urine GC/CT for Quest
+                </p>
                 <div className="input-group mt-20">
                     <input
                         type="search"
@@ -61,148 +59,79 @@ const Homepage = () => {
                         aria-label="Search"
                         aria-describedby="search-addon"
                         value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
+                        onChange={handleChange}
                     />
-                    <button
-                        type="button"
-                        className="btn btn-outline-primary"
-                        data-mdb-ripple-init
-                        onClick={handleSearchClick}
-                    >
-                        Search
-                    </button>
+
+                    {searchTerm && filteredItems.length > 0 && (
+                        <ul style={{
+                            position: 'absolute',
+                            top: '100%',
+                            left: 0,
+                            width: '100%',
+                            border: '1px solid #ccc',
+                            backgroundColor: '#fff',
+                            margin: 0,
+                            padding: 0,
+                            listStyleType: 'none',
+                            maxHeight: '200px',
+                            overflowY: 'auto'
+                        }}>
+
+                            {/* Shows pop up filter words */}
+                            {filteredItems.map((item) => (
+                                <li
+                                    key={item.procedureId}
+                                    onClick={() => handleItemClick(item)}
+                                    style={{
+                                        padding: '8px',
+                                        borderBottom: '1px solid #ddd',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    {item.procedureName}
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+
+                    {searchTerm && filteredItems.length === 0 && (
+                        <ul style={{
+                            position: 'absolute',
+                            top: '100%',
+                            left: 0,
+                            width: '100%',
+                            border: '1px solid #ccc',
+                            backgroundColor: '#fff',
+                            margin: 0,
+                            padding: 0,
+                            listStyleType: 'none',
+                            maxHeight: '200px',
+                            overflowY: 'auto'
+                        }}>
+                            <li style={{ padding: '8px' }}>No results found</li>
+                        </ul>
+                    )}
                 </div>
             </div>
 
             {/* Render search results */}
-            {searchResults.length > 0 && (
+            {selectedItem && (
                 <div className="mt-20">
-                    {searchResults.map(result => (
-                        <div key={result.id}>
-                            <p className='text-4xl font-bold mb-4'>{result.procedureName}</p>
+                    <p className='text-4xl font-bold mb-4'>{selectedItem.procedureName}</p>
 
-                            <div className=' max-w-4xl'>
-                                <img
-                                    className='object-contain h-full w-full'
-                                    src={result.procedureimageUrls}
-                                    alt={result.procedureName}
-                                />
-                            </div>
-                            <ol className='text-xl mt-4 list-decimal pl-4'>
-                                {result.procedureInstructions.map((bullet, index) => (
-                                    <li key={index}>{bullet}</li>
-                                ))}
-                            </ol>
-                            <p className='text-xl mt-8'>{result.procedureSpecialInstructions}</p>
-
-
-
-
-
-
-
-                           {/* ER Section*/}
-                            <div>
-                                <p className='text-xl font-bold mt-16'>{result.sub}</p>
-                                {result.bulletPoints && result.bulletPoints.length > 0 && (
-                                    <ul className='mt-4' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
-                                        {result.bulletPoints.map((bullet, index) => (
-                                            <li key={index}>{bullet}</li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </div>
-                            <div>
-                                <p className='text-xl font-bold mt-16'>{result.sub2}</p>
-                                {result.bulletPoints2 && result.bulletPoints2.length > 0 && (
-                                    <ul className='mt-4' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
-                                        {result.bulletPoints2.map((bullet, index) => (
-                                            <li key={index}>{bullet}</li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </div>
-                            {/* ************* */}
-                            
-                            <div>
-                                <p className='text-xl font-bold mt-16'>{result.sub3}</p>
-                                {result.subHead && <p className='mt-4'>{result.subHead}</p>}
-                                {result.bulletPoints3 && result.bulletPoints3.length > 0 && (
-                                    <ul className='mt-2' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
-                                        {result.bulletPoints3.map((bullet, index) => (
-                                            <li key={index}>{bullet}</li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </div>
-                            <div>
-                                <p className='mt-8'>{result.subHead2}</p>
-                                {result.bulletPoints4 && result.bulletPoints4.length > 0 && (
-                                    <ul className='mt-2' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
-                                        {result.bulletPoints4.map((bullet, index) => (
-                                            <li key={index}>{bullet}</li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </div>
-                            <div>
-                                <p className='mt-8'>{result.subHead3}</p>
-                                {result.bulletPoints5 && result.bulletPoints5.length > 0 && (
-                                    <ul className='mt-2' style={{ listStyleType: 'disc', paddingLeft: '3em' }}>
-                                        {result.bulletPoints5.map((bullet, index) => (
-                                            <li key={index}>{bullet}</li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </div>
-                            <p className='text-xl font-bold mt-16'>{result.sub4}</p>
-
-                            
-                            <div className="mt-6">
-                                {result.requiredSupplies && result.requiredSupplies.length > 0 && (
-                                    <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14'>
-                                        {result.requiredSupplies.map((supply, index) => (
-                                            <div key={index} className="card">
-                                                <div className="relative">
-                                                    {result.imageUrls && result.imageUrls[index] && (
-                                                        <img key={index} src={result.imageUrls[index]} className="card-img-top object-cover h-64 w-full" alt={`${supply}`} />
-                                                    )}
-                                                </div>
-                                                
-                                                <div className="card-body flex justify-center py-2">
-                                                    <p className="card-text text-lg">{supply}</p>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
-                            </div>
-
-                            {/* If no videos are found during the search, title will not be available */}
-                            {/* <div>
-                                {result.videoUrl && result.videoUrl !== 0 && (
-                                    <p className='mt-32 text-4xl font-bold'>Test Overview and Visual Setup Reference</p>
-                                )}
-                                {!result.videoUrl && (
-                                    <p className='mt-32 text-4xl font-bold'></p>
-                                )}
-                            </div>
-                            {result.videoUrl && result.videoUrl.length !== 0 && (
-                                <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 flex items-stretch gap-4'>
-                                    <div className="border-3 mt-20 flex justify-center video-container">
-                                        <div className="embed-responsive embed-responsive-21by9">
-                                            <img className="object-fill w-full h-full embed-responsive-item" src={result.fullImageUrl} alt="fullImageUrl" />
-                                        </div>
-                                    </div>
-                                    <div className="border-3 mt-20 flex justify-center video-container">
-                                        <div className="embed-responsive embed-responsive-21by9">
-                                            <iframe className="embed-responsive-item" title="Video Player" src={result.videoUrl} allowFullScreen />
-                                        </div>
-                                    </div>
-                                </div>
-                            )} */}
-                        </div>
-                    ))}
+                    <div className='max-w-4xl'>
+                        <img
+                            className='object-contain h-full w-full'
+                            src={selectedItem.procedureImageUrls}
+                            alt={selectedItem.procedureName}
+                        />
+                    </div>
+                    <ol className='text-xl mt-4 list-decimal pl-4'>
+                        {selectedItem.procedureInstructions.map((bullet, index) => (
+                            <li key={index}>{bullet}</li>
+                        ))}
+                    </ol>
+                    <p className='text-xl mt-8'>{selectedItem.procedureSpecialInstructions}</p>
                 </div>
             )}
         </div>
