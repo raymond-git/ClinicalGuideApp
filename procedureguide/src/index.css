@@ -31,3 +31,36 @@ code {
   width: 100%; /* Ensure the embedded item (like iframe or video) stretches to the full width */
   height: 100%;
 }
+
+ul.fancy-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.fancy-list li {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 20px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #000000,  #918981); /* Black to White Gradient */
+  padding: 15px 20px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+/* Hover effect for list items */
+ul.fancy-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom bullet points with Font Awesome */
+
+
+/* Hover effect for bullet icons */
+ul.fancy-list li:hover::before {
+  color: #fff;
+}

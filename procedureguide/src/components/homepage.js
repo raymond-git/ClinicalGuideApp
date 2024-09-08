@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import proceduresData from '../components/procedures.json'; // Adjust path as needed
+import Navbar from "./navbar";
+import Footer from "./footer";
 
 const Homepage = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -42,98 +44,104 @@ const Homepage = () => {
     };
 
     return (
-        <div className='mx-20 md:mx-30 lg:mx-40 my-12'>
-            <div className="mt-32">
-                <div className="font-bold text-center text-lg lg:text-5xl">Clinical Procedure Lookup</div>
-                <p className='text-xl text-rose-600 font-bold text-center mt-8'>
-                    Testing Phase! Please type into the search bar to see suggestions and select an option below. Copying and pasting does not currently work!
-                </p>
-                <p className='mt-8'>
-                    A1C, Endocervical Female GC/CT Test, Group B Step (GBS) Swab Tray, Hemoglobin, Male Urethral Swab GC/CT Test, PAP - Thin Prep Set, Plantar Wart Tray Set Up, Rectal Exam Tray Set Up, Stool C. diff, Stool Culture, Stool O&P, Throat or Rectal GC/CT Test, Urine GC/CT for Quest
-                </p>
-                <div className="input-group mt-20">
-                    <input
-                        type="search"
-                        className="border-1 form-control rounded"
-                        placeholder="Search"
-                        aria-label="Search"
-                        aria-describedby="search-addon"
-                        value={searchTerm}
-                        onChange={handleChange}
-                    />
+        <div>
+            <Navbar></Navbar>
+            <div className='mx-20 md:mx-30 lg:mx-64 my-12'>
 
-                    {searchTerm && filteredItems.length > 0 && (
-                        <ul style={{
-                            position: 'absolute',
-                            top: '100%',
-                            left: 0,
-                            width: '100%',
-                            border: '1px solid #ccc',
-                            backgroundColor: '#fff',
-                            margin: 0,
-                            padding: 0,
-                            listStyleType: 'none',
-                            maxHeight: '200px',
-                            overflowY: 'auto'
-                        }}>
+                <div className="mt-32">
+                    <div className="font-serif font-bold text-center text-lg lg:text-4xl">Clinical Procedure Lookup</div>
+                    {/* <p className='font-serif text-center text-xl mt-8'>Search for medical procedures, view required items, and access step-by-step instructions with images.</p> */}
+                    <p className='text-xl text-rose-600 font-bold text-center mt-8'>
+                        Testing Phase! Please type into the search bar to see suggestions and select an option below. Copying and pasting does not currently work!
+                    </p>
+                    <p className='mt-8'>
+                        A1C, Endocervical Female GC/CT Test, Group B Step (GBS) Swab Tray, Hemoglobin, Male Urethral Swab GC/CT Test, PAP - Thin Prep Set, Plantar Wart Tray Set Up, Rectal Exam Tray Set Up, Stool C. diff, Stool Culture, Stool O&P, Throat or Rectal GC/CT Test, Urine GC/CT for Quest
+                    </p>
+                    <div className="input-group mt-20">
+                        <input
+                            type="search"
+                            className="border-1 form-control rounded"
+                            placeholder="Search"
+                            aria-label="Search"
+                            aria-describedby="search-addon"
+                            value={searchTerm}
+                            onChange={handleChange}
+                        />
 
-                            {/* Shows pop up filter words */}
-                            {filteredItems.map((item) => (
-                                <li
-                                    key={item.procedureId}
-                                    onClick={() => handleItemClick(item)}
-                                    style={{
-                                        padding: '8px',
-                                        borderBottom: '1px solid #ddd',
-                                        cursor: 'pointer'
-                                    }}
-                                >
-                                    {item.procedureName}
-                                </li>
+                        {searchTerm && filteredItems.length > 0 && (
+                            <ul style={{
+                                position: 'absolute',
+                                top: '100%',
+                                left: 0,
+                                width: '100%',
+                                border: '1px solid #ccc',
+                                backgroundColor: '#fff',
+                                margin: 0,
+                                padding: 0,
+                                listStyleType: 'none',
+                                maxHeight: '200px',
+                                overflowY: 'auto'
+                            }}>
+
+                                {/* Shows pop up filter words */}
+                                {filteredItems.map((item) => (
+                                    <li
+                                        key={item.procedureId}
+                                        onClick={() => handleItemClick(item)}
+                                        style={{
+                                            padding: '8px',
+                                            borderBottom: '1px solid #ddd',
+                                            cursor: 'pointer'
+                                        }}
+                                    >
+                                        {item.procedureName}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+
+                        {/* {searchTerm && filteredItems.length === 0 && (
+                            <ul style={{
+                                position: 'absolute',
+                                top: '100%',
+                                left: 0,
+                                width: '100%',
+                                border: '1px solid #ccc',
+                                backgroundColor: '#fff',
+                                margin: 0,
+                                padding: 0,
+                                listStyleType: 'none',
+                                maxHeight: '200px',
+                                overflowY: 'auto'
+                            }}>
+                                <li style={{ padding: '8px' }}>No results found</li>
+                            </ul>
+                        )} */}
+                    </div>
+                </div>
+
+                {/* Render search results */}
+                {selectedItem && (
+                    <div className="mt-20" >
+                        <p className='text-4xl font-bold mb-4'>{selectedItem.procedureName}</p>
+                        <div>
+                            <img
+                                className='object-fit'
+                                src={selectedItem.procedureImageUrls}
+                                alt={selectedItem.procedureName}
+                            />
+                        </div>
+                        <ul className='content-center fancy-list text-xl mt-4 list-decimal pl-4'>
+                            {/* <ul className='fancy-list text-xl mt-4 list-decimal pl-4'> */}
+                            {selectedItem.procedureInstructions.map((bullet, index) => (
+                                <li key={index}>{bullet}</li>
                             ))}
                         </ul>
-                    )}
-
-                    {searchTerm && filteredItems.length === 0 && (
-                        <ul style={{
-                            position: 'absolute',
-                            top: '100%',
-                            left: 0,
-                            width: '100%',
-                            border: '1px solid #ccc',
-                            backgroundColor: '#fff',
-                            margin: 0,
-                            padding: 0,
-                            listStyleType: 'none',
-                            maxHeight: '200px',
-                            overflowY: 'auto'
-                        }}>
-                            <li style={{ padding: '8px' }}>No results found</li>
-                        </ul>
-                    )}
-                </div>
-            </div>
-
-            {/* Render search results */}
-            {selectedItem && (
-                <div className="mt-20">
-                    <p className='text-4xl font-bold mb-4'>{selectedItem.procedureName}</p>
-
-                    <div className='max-w-4xl'>
-                        <img
-                            className='object-contain h-full w-full'
-                            src={selectedItem.procedureImageUrls}
-                            alt={selectedItem.procedureName}
-                        />
+                        <p className='font-serif text-xl mt-12'>{selectedItem.procedureSpecialInstructions}</p>
                     </div>
-                    <ol className='text-xl mt-4 list-decimal pl-4'>
-                        {selectedItem.procedureInstructions.map((bullet, index) => (
-                            <li key={index}>{bullet}</li>
-                        ))}
-                    </ol>
-                    <p className='text-xl mt-8'>{selectedItem.procedureSpecialInstructions}</p>
-                </div>
-            )}
+                )}
+            </div>
+            <Footer></Footer>
         </div>
     );
 };
