@@ -2,7 +2,7 @@
 const Footer = () => {
 
     return (
-        <div className="bg-black mt-24 pt-8 lg:mt-60 xl:mt-96">
+        <div className="bg-black mt-24 pt-8">
             <div className="flex flex-col items-center gap-4 mt-2">
                 <div className='flex justify-center gap-2'>
                     <img className="h-8" src="../heartlogo.png" alt="Logo" />
