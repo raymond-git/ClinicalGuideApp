@@ -21,12 +21,39 @@
         "name": "Endocervical Female GC/CT Test",
         "fullImage": "gcctfemale.jpg",
         "instructions": [
-            "Show swab package open and swab stick 1/2 exposure"
+            "Show swab package open and swab stick handle 1/2 exposure"
         ]
     },
 
     {
         "id": 3,
+        "name": "ER",
+        "subnames": [
+            {
+                "subname": "Instructions for (Taxi) Arrangements to Hospital:",
+                "instructions": [
+                    "Double-check with the patient before calling the taxi to ensure they still want it, as plans can change",
+                    "Confirm the hospital name with the doctor (e.g., \"Summit ER Hospital\")",
+                    "Get a taxi voucher form from the nursing room on the 2nd floor, if not 3rd floor. Tear off the first page for the driver after finished filling in and keep the second slip for records",
+                    "Call a taxi and specify \"Summit Hospital\" as the destination. If asked about payment, mention it's a taxi voucher. Provide the phone number (510) 318-5800 or clinic address 835 Webster Street Oakland CA 94607 if needed",
+                    "Ask the PSR to print the face sheet and referral, and I will print the signed progress note (indicated by a check mark) to give to the patient",
+                    "Inform downstairs PSR and receptionist (extension 5801) about the taxi arriving to pick up the patient"
+                ]
+            },
+            {
+                "subname": "Instructions for (Transportation) Arrangements to Hospital:",
+                "instructions": [
+                    "Ask the provider the reason the patient is going to the ER",
+                    "Call (510) 444-1616 requesting for \"TRANSPORTATION ONLY\"",
+                    "Address: 835 Webster Street Oakland CA 94607, Rolland & Kathryne Lowe Medical Center",
+                    "Special Equipment: Sometimes they ask if patient needs special equipment, confirm with doctor"
+                ]
+            }
+        ]
+    },
+
+    {
+        "id": 4,
         "name": "Group B Step (GBS) Swab Tray",
         "fullImage": "gbs.jpg",
         "instructions": [
@@ -38,7 +65,7 @@
     },
 
     {
-        "id": 4,
+        "id": 5,
         "name": "Hemoglobin",
         "fullImage": "hemoglobin.jpg",
         "instructions": [
@@ -55,16 +82,16 @@
     },
 
     {
-        "id": 5,
+        "id": 6,
         "name": "Male Urethral Swab GC/CT Test",
         "fullImage": "gcctmale.jpg",
         "instructions": [
-            "Show swab package open and swab stick 1/2 exposure"
+            "Show swab package open and swab stick handle 1/2 exposure"
         ]
     },
 
     {
-        "id": 6,
+        "id": 7,
         "name": "PAP - Thin Prep Set",
         "fullImage": "papthinprep.jpg",
         "instructions": [
@@ -82,7 +109,7 @@
     },
 
     {
-        "id": 7,
+        "id": 8,
         "name": "Plantar Wart Tray Set Up",
         "fullImage": "plantarwart.jpg",
         "instructions": [
@@ -92,7 +119,7 @@
     },
 
     {
-        "id": 8,
+        "id": 9,
         "name": "Rectal Exam Tray Set Up",
         "fullImage": "rectalexam.jpg",
         "instructions": [
@@ -105,7 +132,7 @@
     },
 
     {
-        "id": 9,
+        "id": 10,
         "name": "Stool C. diff",
         "fullImage": "stoolcdiff.jpg",
         "instructions": [
@@ -122,7 +149,7 @@
     },
 
     {
-        "id": 10,
+        "id": 11,
         "name": "Stool Culture",
         "fullImage": "stoolculture.jpg",
         "instructions": [
@@ -138,7 +165,7 @@
     },
 
     {
-        "id": 11,
+        "id": 12,
         "name": "Stool O&P",
         "fullImage": "stoolo&p.jpg",
         "instructions": [
@@ -149,12 +176,12 @@
             "Offer 3 pairs of gloves if patient is without gloves"
         ],
         "specialInstructions": [
-             "Instruct patient to keep the clear liquid of each bottle. Each bottle has a small spoon attached to the lid. Use this spoon to fill the bottle with stool until it reaches the black \"fill\" line. Collect 1 O&P bottle per day: one for Day1, one for Day 2, and one for Day 3. Store at room temperature After collecting samples for 3 days, bring all the stool specimens and the lab form to Quest Lab for processing."
+             "Instruct patient to keep the clear liquid of each bottle. Each bottle has a small spoon attached to the lid. Use this spoon to fill the bottle with stool until it reaches the black \"fill\" line. Collect 1 O&P bottle per day: one for Day 1, one for Day 2, and one for Day 3. Store at room temperature After collecting samples for 3 days, bring all the stool specimens and the lab form to Quest Lab for processing."
         ]
     },
 
     {
-        "id": 12,
+        "id": 13,
         "name": "Throat or Rectal GC/CT Test",
         "fullImage": "gcctthroatrectal.jpg",
         "instructions": [
@@ -164,7 +191,7 @@
     },
 
     {
-        "id": 13,
+        "id": 14,
         "name": "Urine GC/CT for Quest",
         "fullImage": "gccturine.jpg",
         "instructions": [
@@ -176,30 +203,8 @@
     },
 
 
+
     
-
-
-    {
-        "id": 14,
-        "name": "ER",
-        "subtitle": "Instructions for (Taxi) Arrangements to Hospital:",
-        "subtitle2": "Instructions for (Transportation) Arrangements to Hospital:",
-        "bulletPoints": [
-            "Double-check with the patient before calling the taxi to ensure they still want it, as plans can change",
-            "Confirm the hospital name with the doctor (e.g., \"Summit ER Hospital\")",
-            "Get a taxi voucher form from the nursing room on the 2nd floor, if not 3rd floor. Tear off the first page for the driver after finished filling in and keep the second slip for records",
-            "Call a taxi and specify \"Summit Hospital\" as the destination. If asked about payment, mention it's a taxi voucher. Provide the phone number (510) 318-5800 or clinic address if needed",
-            "Ask the PSR to print the face sheet and referral, and I will print the signed progress note (indicated by a check mark) to give to the patient",
-            "Inform downstairs PSR and receptionist (extension 5801) about the taxi arriving to pick up the patient"
-        ],
-        "bulletPoints2": [
-            "Ask the provider the reason the patient is going to the ER",
-            "Call (510) 444-1616 requesting for transportation ONLY",
-            "Address: 835 Webster Street Oakland CA 94607, Rolland & Kathryne Lowe Medical Center",
-            "Special Equipment: Sometimes they ask if patient needs special equipment, confirm with doctor"
-        ]
-    },
-
 
     {
         "id": 15,

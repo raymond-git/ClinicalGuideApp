@@ -16,13 +16,14 @@ const Homepage = () => {
         if (query) {
             // Filter procedures based on search term
             const filteredResults = proceduresData.filter(procedure =>
-                procedure.name.toLowerCase().includes(searchTerm.toLowerCase())
+                procedure.name.toLowerCase().includes(query.toLowerCase())
             );
 
             const resultsToDisplay = filteredResults.map(procedure => ({
                 procedureId: procedure.id,
                 procedureName: procedure.name,
                 procedureInstructions: procedure.instructions,
+                procedureSubNames: procedure.subnames,
                 procedureSpecialInstructions: procedure.specialInstructions,
                 procedureImageUrls: procedure.fullImage,
                 bulletPoints: procedure.bulletPoints,
@@ -31,7 +32,7 @@ const Homepage = () => {
             // Update state with filtered and extracted results
             setFilteredItems(resultsToDisplay);
         } else {
-            // Clear results if search term is empty when you back space
+            // Clear results if search term is empty
             setFilteredItems([]);
         }
     };
@@ -45,17 +46,16 @@ const Homepage = () => {
 
     return (
         <div>
-            <Navbar></Navbar>
+            <Navbar />
             <div className='mx-20 md:mx-30 lg:mx-64 my-12'>
-
                 <div className="mt-32">
                     <div className="font-serif font-bold text-center text-lg lg:text-4xl">Clinical Procedure Lookup</div>
                     {/* <p className='font-serif text-center text-xl mt-8'>Search for medical procedures, view required items, and access step-by-step instructions with images.</p> */}
                     <p className='text-xl text-rose-600 font-bold text-center mt-8'>
-                        Testing Phase! Please type into the search bar to see suggestions and select an option below. Copying and pasting does not currently work!
+                        Testing Phase! Please either copy and paste the procedures listed below or enter them into the search bar for results.
                     </p>
                     <p className='mt-8'>
-                        A1C, Endocervical Female GC/CT Test, Group B Step (GBS) Swab Tray, Hemoglobin, Male Urethral Swab GC/CT Test, PAP - Thin Prep Set, Plantar Wart Tray Set Up, Rectal Exam Tray Set Up, Stool C. diff, Stool Culture, Stool O&P, Throat or Rectal GC/CT Test, Urine GC/CT for Quest
+                        A1C, Endocervical Female GC/CT Test, ER, Group B Step (GBS) Swab Tray, Hemoglobin, Male Urethral Swab GC/CT Test, PAP - Thin Prep Set, Plantar Wart Tray Set Up, Rectal Exam Tray Set Up, Stool C. diff, Stool Culture, Stool O&P, Throat or Rectal GC/CT Test, Urine GC/CT for Quest
                     </p>
                     <div className="input-group mt-20">
                         <input
@@ -82,8 +82,6 @@ const Homepage = () => {
                                 maxHeight: '200px',
                                 overflowY: 'auto'
                             }}>
-
-                                {/* Shows pop up filter words */}
                                 {filteredItems.map((item) => (
                                     <li
                                         key={item.procedureId}
@@ -99,49 +97,53 @@ const Homepage = () => {
                                 ))}
                             </ul>
                         )}
-
-                        {/* {searchTerm && filteredItems.length === 0 && (
-                            <ul style={{
-                                position: 'absolute',
-                                top: '100%',
-                                left: 0,
-                                width: '100%',
-                                border: '1px solid #ccc',
-                                backgroundColor: '#fff',
-                                margin: 0,
-                                padding: 0,
-                                listStyleType: 'none',
-                                maxHeight: '200px',
-                                overflowY: 'auto'
-                            }}>
-                                <li style={{ padding: '8px' }}>No results found</li>
-                            </ul>
-                        )} */}
                     </div>
                 </div>
 
                 {/* Render search results */}
                 {selectedItem && (
-                    <div className="mt-20" >
+                    <div className="mt-20">
                         <p className='text-4xl font-bold mb-4'>{selectedItem.procedureName}</p>
-                        <div>
-                            <img
-                                className='object-fit'
-                                src={selectedItem.procedureImageUrls}
-                                alt={selectedItem.procedureName}
-                            />
-                        </div>
-                        <ul className='content-center fancy-list text-xl mt-4 list-decimal pl-4'>
-                            {/* <ul className='fancy-list text-xl mt-4 list-decimal pl-4'> */}
-                            {selectedItem.procedureInstructions.map((bullet, index) => (
-                                <li key={index}>{bullet}</li>
-                            ))}
-                        </ul>
-                        <p className='font-serif text-xl mt-12'>{selectedItem.procedureSpecialInstructions}</p>
+
+                        {/* Conditionally render based on the presence of an image */}
+                        {selectedItem.procedureImageUrls ? (
+                            <div>
+                                <img
+                                    className='object-fit border-16 border-grey-500'
+                                    src={selectedItem.procedureImageUrls}
+                                    alt={selectedItem.procedureName}
+                                />
+                                <ul className='content-center fancy-list text-xl mt-4 list-decimal pl-4'>
+                                    {selectedItem.procedureInstructions.map((bullet, index) => (
+                                        <li key={index}>{bullet}</li>
+                                    ))}
+                                </ul>
+                                <p className='font-serif text-xl mt-12'>{selectedItem.procedureSpecialInstructions}</p>
+                            </div>
+                        ) : (
+                            <div>
+                                {/* Loop through subnames and render instructions if no image */}
+                                {selectedItem.procedureSubNames && selectedItem.procedureSubNames.length > 0 ? (
+                                    selectedItem.procedureSubNames.map((subnameItem, index) => (
+                                        <div key={index} className="mb-8">
+                                            <h2 className='text-2xl font-semibold mb-4'>{subnameItem.subname}</h2>
+                                            <ul className='content-center fancy-list text-xl mt-4 list-decimal pl-4'>
+                                                {subnameItem.instructions.map((bullet, bulletIndex) => (
+                                                    <li key={bulletIndex}>{bullet}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    ))
+                                ) : (
+                                    <p>Not available yet hehehehehe:) Work in progress!</p>
+                                )}
+                                <p className='font-serif text-xl mt-12'>{selectedItem.procedureSpecialInstructions}</p>
+                            </div>
+                        )}
                     </div>
                 )}
             </div>
-            <Footer></Footer>
+            <Footer />
         </div>
     );
 };
