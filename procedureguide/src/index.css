@@ -18,17 +18,20 @@ code {
 }
 
 .video-container {
-  width: 100%; /* Ensure the container spans the full width of its parent */
+  width: 100%;
+  /* Ensure the container spans the full width of its parent */
   height: 500px;
 }
 
 .video-container .embed-responsive {
-  width: 100%; /* Ensure the embed-responsive div stretches to the full width */
+  width: 100%;
+  /* Ensure the embed-responsive div stretches to the full width */
   height: 100%;
 }
 
 .video-container .embed-responsive .embed-responsive-item {
-  width: 100%; /* Ensure the embedded item (like iframe or video) stretches to the full width */
+  width: 100%;
+  /* Ensure the embedded item (like iframe or video) stretches to the full width */
   height: 100%;
 }
 
@@ -43,11 +46,14 @@ ul.fancy-list li {
   margin-bottom: 20px;
   font-size: 0.8em;
   font-weight: bold;
-  color: #fff;
-  background: linear-gradient(135deg, #000000,  #918981); /* Black to White Gradient */
+  /* color: #fff; */
+  /* background: linear-gradient(135deg, #000000,  #918981);  */
+  color: black;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  /* Black to White Gradient */
   padding: 15px 20px;
   border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow .3s;
   cursor: pointer;
 }
 

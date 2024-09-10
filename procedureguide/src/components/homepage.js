@@ -47,11 +47,11 @@ const Homepage = () => {
     return (
         <div>
             <Navbar />
-            <div className='mx-20 md:mx-30 lg:mx-64 my-12'>
+            <div className='mx-10 lg:mx-60 xl:mx-96 my-12'>
                 <div className="mt-32">
-                    <div className="font-serif font-bold text-center text-lg lg:text-4xl">Clinical Procedure Lookup</div>
+                    <div className="font-serif font-bold text-center text-xl lg:text-4xl">Clinical Procedure Lookup</div>
                     {/* <p className='font-serif text-center text-xl mt-8'>Search for medical procedures, view required items, and access step-by-step instructions with images.</p> */}
-                    <p className='text-xl text-rose-600 font-bold text-center mt-8'>
+                    <p className='lg:text-xl text-rose-600 font-bold text-center mt-8'>
                         Testing Phase! Please either copy and paste the procedures listed below or enter them into the search bar for results.
                     </p>
                     <p className='mt-8'>
@@ -103,31 +103,32 @@ const Homepage = () => {
                 {/* Render search results */}
                 {selectedItem && (
                     <div className="mt-20">
-                        <p className='text-4xl font-bold mb-4'>{selectedItem.procedureName}</p>
+                        <p className='text-xl lg:text-4xl font-bold mb-4'>{selectedItem.procedureName}</p>
 
                         {/* Conditionally render based on the presence of an image */}
                         {selectedItem.procedureImageUrls ? (
                             <div>
                                 <img
-                                    className='object-fit border-16 border-grey-500'
+                                    className='object-fit '
                                     src={selectedItem.procedureImageUrls}
                                     alt={selectedItem.procedureName}
                                 />
-                                <ul className='content-center fancy-list text-xl mt-4 list-decimal pl-4'>
+                                <ul className='content-center fancy-list text-base lg:text-2xl mt-4 list-decimal pl-4'>
                                     {selectedItem.procedureInstructions.map((bullet, index) => (
                                         <li key={index}>{bullet}</li>
                                     ))}
                                 </ul>
-                                <p className='font-serif text-xl mt-12'>{selectedItem.procedureSpecialInstructions}</p>
+                                <p className='font-serif text-base lg:text-xl mt-12'>{selectedItem.procedureSpecialInstructions}</p>
                             </div>
                         ) : (
                             <div>
                                 {/* Loop through subnames and render instructions if no image */}
                                 {selectedItem.procedureSubNames && selectedItem.procedureSubNames.length > 0 ? (
                                     selectedItem.procedureSubNames.map((subnameItem, index) => (
-                                        <div key={index} className="mb-8">
-                                            <h2 className='text-2xl font-semibold mb-4'>{subnameItem.subname}</h2>
-                                            <ul className='content-center fancy-list text-xl mt-4 list-decimal pl-4'>
+                                        <div key={index} className="mb-12">
+                                            <h2 className='text-base lg:text-xl font-semibold mb-4'>{subnameItem.subname}</h2>
+                                            {/* <ul className='content-center fancy-list text-xl mt-4 list-decimal pl-4'> */}
+                                            <ul className='text-sm lg:text-lg list-decimal pl-4'>
                                                 {subnameItem.instructions.map((bullet, bulletIndex) => (
                                                     <li key={bulletIndex}>{bullet}</li>
                                                 ))}

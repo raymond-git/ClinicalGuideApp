@@ -54,12 +54,12 @@
 
     {
         "id": 4,
-        "name": "Group B Step (GBS) Swab Tray",
+        "name": "Group B Step (GBS) Swab Tray (>35 weeks pregnancy)",
         "fullImage": "gbs.jpg",
         "instructions": [
             "Undress waist down",
             "Give Drape to cover",
-            "Blue cap GBS sample kit",
+            "Blue cap GBS sample kit (Specimen is viable for 3 days. If collected on Friday, deliver to HMC or arrange a Quest pickup.)",
             "Gloves"
         ]
     },
@@ -102,9 +102,8 @@
             "Gloves",
             "2 Cotton Swabs"
         ],
-
         "specialInstructions": [
-            "Instruct patient to undress from waist down and use papoer drape to cover"
+            "Instruct patient to undress from waist down and use paper drape to cover"
         ]
     },
 
@@ -128,6 +127,9 @@
             "Gloves",
             "Hemocult Kit",
             "Hemocult Developer /15 mL liquid"
+        ],
+        "specialInstructions": [
+            "Instruct the patient to undress from the waist down, keep underwear on, and cover with a drape."
         ]
     },
 
