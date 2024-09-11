@@ -49,7 +49,7 @@ const Homepage = () => {
             <Navbar />
             <div className='mx-10 lg:mx-60 xl:mx-96 my-12'>
                 <div className="mt-32">
-                    <div className="font-serif font-bold text-center text-xl lg:text-4xl">Clinical Procedure Lookup</div>
+                    <div className="font-serif font-bold text-center text-2xl lg:text-4xl">Clinical Procedure Lookup</div>
                     {/* <p className='font-serif text-center text-xl mt-8'>Search for medical procedures, view required items, and access step-by-step instructions with images.</p> */}
                     <p className='lg:text-xl text-rose-600 font-bold text-center mt-8'>
                         Testing Phase! Please either copy and paste the procedures listed below or enter them into the search bar for results.
@@ -104,17 +104,17 @@ const Homepage = () => {
                 {/* Render search results */}
                 {selectedItem && (
                     <div className="mt-20">
-                        <p className='text-xl lg:text-4xl font-bold mb-4'>{selectedItem.procedureName}</p>
+                        <p className='text-2xl lg:text-4xl font-bold mb-4'>{selectedItem.procedureName}</p>
 
                         {/* Conditionally render based on the presence of an image */}
                         {selectedItem.procedureImageUrls ? (
                             <div>
                                 <img
-                                    className='object-fit pl-10 pr-10 lg:pl-40 lg:pr-40 bg-gray-300'
+                                    className='object-fit sm:pl-10 sm:pr-10 lg:pl-20 lg:pr-20 bg-gray-300'
                                     src={selectedItem.procedureImageUrls}
                                     alt={selectedItem.procedureName}
                                 />
-                                <ul className='content-center fancy-list text-base lg:text-2xl mt-4 list-decimal pl-4'>
+                                <ul className='content-center fancy-list text-xl lg:text-2xl mt-4 list-decimal pl-4'>
                                     {selectedItem.procedureInstructions.map((bullet, index) => (
                                         <li key={index}>{bullet}</li>
                                     ))}
@@ -139,7 +139,7 @@ const Homepage = () => {
                                 ) : (
                                     <p>Not available yet hehehehehe:) Work in progress!</p>
                                 )}
-                                <p className='font-serif text-xl mt-12'>{selectedItem.procedureSpecialInstructions}</p>
+                                <p className='font-serif lg:text-xl mt-12'>{selectedItem.procedureSpecialInstructions}</p>
                             </div>
                         )}
                     </div>
