@@ -55,12 +55,13 @@ const Homepage = () => {
                         Testing Phase! Please either copy and paste the procedures listed below or enter them into the search bar for results.
                     </p>
                     <p className='mt-8'>
-                        A1C, Endocervical Female GC/CT Test, ER, Group B Step (GBS) Swab Tray, Hemoglobin, Male Urethral Swab GC/CT Test, PAP - Thin Prep Set, Plantar Wart Tray Set Up, Rectal Exam Tray Set Up, Stool C. diff, Stool Culture, Stool O&P, Throat or Rectal GC/CT Test, Urine GC/CT for Quest
+                        A1C, Endocervical Female GC/CT Test, ER, Group B Step (GBS) Swab Tray, Hemoglobin, Incision and Drainage of Abscess, Male Urethral Swab GC/CT Test, PAP - Thin Prep Set, Plantar Wart Tray Set Up, Rectal Exam Tray Set Up, Stool C. diff, Stool Culture, Stool O&P, Suture Removal, Throat or Rectal GC/CT Test, Urine GC/CT for Quest
                     </p>
+
                     <div className="input-group mt-20">
                         <input
                             type="search"
-                            className="border-1 form-control rounded"
+                            className="border-1 form-control rounded "
                             placeholder="Search"
                             aria-label="Search"
                             aria-describedby="search-addon"
@@ -109,7 +110,7 @@ const Homepage = () => {
                         {selectedItem.procedureImageUrls ? (
                             <div>
                                 <img
-                                    className='object-fit '
+                                    className='object-fit pl-10 pr-10 lg:pl-40 lg:pr-40 bg-gray-300'
                                     src={selectedItem.procedureImageUrls}
                                     alt={selectedItem.procedureName}
                                 />
