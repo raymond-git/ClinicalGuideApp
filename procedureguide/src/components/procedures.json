@@ -99,7 +99,7 @@
             "Sterile scissors",
             "Sterile pick-up forceps",
             "Packing strip",
-            "Hemostat (One straight or One curve)"
+            "Hemostat (One straight or a hook one)"
         ]
     },
 
@@ -246,7 +246,7 @@
         "id": 17,
         "name": "Glucose",
         "instructions": "To perform a glucose test, first prepare your glucose meter and insert a test strip if needed. Clean your finger with an alcohol swab and let it dry. Use a lancing device to prick the side of your fingertip and gently squeeze to obtain a drop of blood. Use the second drop of blood for testing. Apply the second drop to the test strip according to the meter’s instructions and wait for the meter to display your blood glucose level.",
-        "supplies": ["Bandaid", "CottonBall", "Alcohol Wipe", "Red Glucometer", "HemoCue Glucose Cuvettes from the Fridge" ]
+        "supplies": ["Lancet", "Bandaid", "CottonBall", "Alcohol Wipe", "Red Glucometer", "HemoCue Glucose Cuvettes from the Fridge" ]
     },
 
     {
@@ -301,6 +301,46 @@
         "instructions": "Retrieve a \"Skin Staple Remover\" from the inventory room for the doctor. Please note that it is for \"SINGLE USE ONLY\" and should be discarded after the doctor has finished using it.",
         "supplies": ["Staple Remover Front View", "Staple Remove Back View"],
         "images":["stapleremoverfront.png", "stapleremoverback.png"]
+    },
+
+    {
+        "id": 3,
+        "name": "Sputum Instructionss",
+        "subnames": [
+            {
+                "subname": "Morning Sputum Collection Instructions:",
+                "instructions": [
+                    "Collect sputum immediately after waking up.",
+                    "Do not brush your teeth or drink water beforehand.",
+                    "Ensure sputum (not saliva) reaches the line 5 mark on the tube.",
+                    "If needed, keep coughing until the mucus reaches line 5 mark on the tube.",
+                    "After collecting the mucus, place the sputum sample and the requisition form in the provided bag.",
+                    "Store the bag in a regular refrigerator."
+                ]
+            },
+
+            {
+                "subname": "Patient's Sputum Sample Collection Date",
+                "instructions": [
+                    "Sunday, Monday, and Tuesday (Drop off on Tuesday at clinic)",
+                    "Tuesday, Wednesday, and Thursday (Drop off on Thursday at clinic)"
+                ]
+            },
+            
+            {
+                "subname": "Supplies Needed for the Patient",
+                "instructions": [
+                    "A sputum tube(Label patient's first and last name, DOB, and The corresponding day number (1, 2, or 3)",
+                    "A requisition lab form (Total 3 copies)",
+                    "A completed public health form signed by the doctor (Total 3 copies)",
+                    "Label each bag with the numbers 1, 2, and 3, as well as the collection date.",
+                    "Mark the tube with a yellow highlighter for the patient to write the date of the sputum sample."
+                ]
+            }
+        ],
+        "specialInstructions": [
+           "Place a copy of the public health form in the medical records box for scanning"
+        ]
     },
 
     {

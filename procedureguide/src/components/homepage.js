@@ -24,6 +24,7 @@ const Homepage = () => {
                 procedureName: procedure.name,
                 procedureInstructions: procedure.instructions,
                 procedureSubNames: procedure.subnames,
+                procedureSubHeadings: procedure.subheading,
                 procedureSpecialInstructions: procedure.specialInstructions,
                 procedureImageUrls: procedure.fullImage,
                 bulletPoints: procedure.bulletPoints,
@@ -128,12 +129,16 @@ const Homepage = () => {
                                     selectedItem.procedureSubNames.map((subnameItem, index) => (
                                         <div key={index} className="mb-12">
                                             <h2 className='text-base lg:text-xl font-semibold mb-4'>{subnameItem.subname}</h2>
+                                            <h2 className='text-base lg:text-lg mb-4'>{subnameItem.subheading}</h2>
+                    
+                                           
                                             {/* <ul className='content-center fancy-list text-xl mt-4 list-decimal pl-4'> */}
                                             <ul className='text-sm lg:text-lg list-decimal pl-4'>
                                                 {subnameItem.instructions.map((bullet, bulletIndex) => (
                                                     <li key={bulletIndex}>{bullet}</li>
                                                 ))}
                                             </ul>
+                                            <h2 className='text-base lg:text-lg mt-2'>{subnameItem.subheading2}</h2>
                                         </div>
                                     ))
                                 ) : (
