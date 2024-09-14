@@ -157,155 +157,7 @@
 
     {
         "id": 11,
-        "name": "Stool C. diff",
-        "fullImage": "stoolcdiff.jpg",
-        "instructions": [
-            "1 Green sterile cup",
-            "1 Lab label and a requisition form",
-            "1 Spatula or tongue depressor to collect stool",
-            "1 Quest bag",
-            "1 Brown paper bag",
-            "Offer 1 pair of gloves if patiet is without gloves"
-        ],
-        "specialInstructions": [
-            "Instruct patient to collect about 1/3 of the sterile cup with stool and place in the freezer. Bring the frozen stool cup and the label form to Quest Lab for processing. Remember to remind patient to schedule appointment in advance before dropping off sample at Quest"
-        ]
-    },
-
-    {
-        "id": 12,
-        "name": "Stool Culture",
-        "fullImage": "stoolculture.jpg",
-        "instructions": [
-            "1 Orange Para-Pak CRS bottle. Check for expiration date",
-            "1 Lab label and a requisition form",
-            "1 Quest bag",
-            "1 Brown paper bag",
-            "Offer 1 pair of gloves if patiet is without gloves"
-        ],
-        "specialInstructions": [
-            "Instruct the patient to keep the clear liquid preservative in the bottle. Use small spoon attached to the cap to scoop the stool over the red line of the orange bottle. Store at room temperature. Bring specimen & lab form to Quest Lab for processing. Remember to remind patient to schedule appointment in advance before dropping off sample at Quest"
-        ]
-    },
-
-    {
-        "id": 13,
-        "name": "Stool O&P",
-        "fullImage": "stoolo&p.jpg",
-        "instructions": [
-            "3 Black \"Total-Fix\" O&P bottles. Check for expiration date. Label the top cap of each bottle as 1, 2, and 3 to indicate the day of collection.",
-            "3 Lab labels and a requisition form. Make sure the encounter label DOES NOT COVER the \"fill\" line.",
-            "1 Quest bag",
-            "1 Brown paper bag",
-            "Offer 3 pairs of gloves if patient is without gloves"
-        ],
-        "specialInstructions": [
-             "Instruct patient to keep the clear liquid of each bottle. Each bottle has a small spoon attached to the lid. Use this spoon to fill the bottle with stool until it reaches the black \"fill\" line. Collect 1 O&P bottle per day: one for Day 1, one for Day 2, and one for Day 3. Store at room temperature After collecting samples for 3 days, bring all the stool specimens and the lab form to Quest Lab for processing."
-        ]
-    },
-
-    {
-        "id": 14,
-        "name": "Suture Removal",
-        "fullImage": "sutureremoval.jpg",
-        "instructions": [
-            "Sterile suture removal kit (scissors and pick-up forceps)",
-            "2x2 gauze",
-            "4x4 gauze",
-            "Sterile strip",
-            "Paper tape"
-        ]
-    },
-
-    {
-        "id": 15,
-        "name": "Throat or Rectal GC/CT Test",
-        "fullImage": "gcctthroatrectal.jpg",
-        "instructions": [
-            "Show swab package open and swab stick handle 1/2 exposure",
-            "Ensure that each tube is labeled with the appropriate stickers - \"Throat\" or \"Rectal\" - if both types of tests are being conducted"
-        ]
-    },
-
-    {
-        "id": 16,
-        "name": "Urine GC/CT for Quest",
-        "fullImage": "gccturine.jpg",
-        "instructions": [
-            "Gloves",
-            "Plastic pipette to transfer",
-            "Dirty catch urine(first stream) in Quest cup",
-            "Fill the \"Apitma Urine Tube\" with urine to the level between the fill area window markers"
-        ]
-    },
-
-
-
-    
-    {
-        "id": 17,
-        "name": "Glucose",
-        "instructions": "To perform a glucose test, first prepare your glucose meter and insert a test strip if needed. Clean your finger with an alcohol swab and let it dry. Use a lancing device to prick the side of your fingertip and gently squeeze to obtain a drop of blood. Use the second drop of blood for testing. Apply the second drop to the test strip according to the meter’s instructions and wait for the meter to display your blood glucose level.",
-        "supplies": ["Lancet", "Bandaid", "CottonBall", "Alcohol Wipe", "Red Glucometer", "HemoCue Glucose Cuvettes from the Fridge" ]
-    },
-
-    {
-    
-        "id": 18,
-        "name": "IUD Removal",
-        "instructions": "",
-        "supplies": ["Ring Forcep", "Lubricant Bottle", "Speculum", "Drape", "Cotton Swabs"],
-        "images":["ringforcep.png", "lubricantbottle.png", "speculum.png", "drape.png", "cottonswabs.png"]
-    },
-
-    {
-        "id": 19,
-        "name": "IUD Setup",
-        "instructions": "",
-        "supplies": ["IUD Sterile Set", "Sterile Field", "Pad", "Sterile Gauze 2x2", "Drape",  "Extra Sterile Bag of Cotton Swab", "Lubricant Jelly", "Povidone/Betadine(Fill to 1/4 Cup)",  "Povidone Setup", "IUD Device: Mirena or Paraguard"],
-        "images":["iudsterileset.png", "sterilefield.png", "pad.png", "sterilegauze2x2.png", "drape.png", "cottonswabset.png", "lubricantjelly.png", "povidone.png", "povidonesetup.png"],
-        "bulletPoints": [
-            "IUD Sterile Set: Located in the left cabinet on the far side of the utility room",
-            "Sterile Field: Central section of the cabinet high above within the utility room",
-            "Pad: In the exam room, under the bed where you'll see all the speculums.",
-            "Sterile Gauze 2x2: Central section of the back room's far left side",
-            "Drape: In the exam room, in one of those cabinets below",
-            "Extra Sterile Bag of Cotton Swab: Central section of the utility room where you find all of the procedure tools",
-            "Lubricant Jelly: In the exam room, in one of those cabinets above",
-            "Povidone/Betadine: In the exam room, in one of those cabinets above",
-            "IUD Device: Mirena or Paraguard: Right section of the cabinet within the utility room"
-        ]
-    },
-
-    {
-        "id": 20,
-        "name": "Knee Injection",
-        "instructions":"Ensure all items are in the procedure cart. Note that Kenalog-10 and Kenalog-40 are for \"ONE-TIME USE ONLY\"; discard them after the doctor has finished. For Lidocaine bottles, write the expiration date after opening. Record the open date and the expiration date, which is 28 days later.",
-        "supplies": ["Kenalog-10", "Kenalog-40", "Lidocaine HCI", "Xylocaine HCI with Epinephrine", "Procedure Cart"],
-        "images":["kenalog10.png", "kenalog40.png", "lidocaineHCI.png", "xylocaineHCI.png"],
-        "fullImage": "kneeinjectionsetup.png",
-        "video": "https://www.youtube.com/embed/BxvDmjRG8dM"
-        
-    },
-
-    {
-        "id": 21,
-        "name": "Salmonella",
-        "supplies": ["Para-Pak"],
-        "images":["salmonella.png"]
-    },
-
-    {
-        "id": 22,
-        "name": "Staple Removal",
-        "instructions": "Retrieve a \"Skin Staple Remover\" from the inventory room for the doctor. Please note that it is for \"SINGLE USE ONLY\" and should be discarded after the doctor has finished using it.",
-        "supplies": ["Staple Remover Front View", "Staple Remove Back View"],
-        "images":["stapleremoverfront.png", "stapleremoverback.png"]
-    },
-
-    {
-        "id": 3,
-        "name": "Sputum Instructionss",
+        "name": "Sputum Instructions",
         "subnames": [
             {
                 "subname": "Patient's Sputum Sample Collection Date",
@@ -328,60 +180,166 @@
             },
             
             {
-                "subname": "Supplies Needed for the Patient",
+                "subname": "Prepare sputum kit for the patient",
                 "instructions": [
                     "Sputum tube(Label patient's first and last name, DOB, and The corresponding day number (1, 2, or 3)",
                     "Requisition lab form (Total 3 copies)",
-                    "Completed public health form signed by the doctor (Total 3 copies)",
+                    "Completed public health form signed by the doctor (Total 3 copies). Make sure to tell patient to write the onset date on the form as well" ,
                     "Label each bag with the numbers 1, 2, and 3, as well as the collection date.",
                     "Mark the tube with a yellow highlighter for the patient to write the date of the sputum sample collection."
                 ]
             }
         ],
         "specialInstructions": [
-           "Place a copy of the completed public health form in the medical records box for scanning"
+           "Remember to place a copy of the completed public health form in the medical records box for scanning"
         ]
     },
 
     {
-        "id": 23,
-        "name": "Sputum Instructions",
-        "subtitle": "Morning Sputum Collection Instructions:",
-        "subtitle2": "Patient's Sputum Sample Collection Date",
-        "subtitle3": "Medical Assistant Guide: Preparing Sputum for Patients",
-        "subtitle4": "Supplies Needed for the Patient",
-        "subheading": "Grab 3 Specimen Bags: Each bag should contain",
-        "subheading2": "Label the Sputum Tubes:",
-        "subheading3": "Documentation:",
+        "id": 12,
+        "name": "Stool C. diff",
+        "fullImage": "stoolcdiff.jpg",
+        "instructions": [
+            "1 Green sterile cup",
+            "1 Lab label and a requisition form",
+            "1 Spatula or tongue depressor to collect stool",
+            "1 Quest bag",
+            "1 Brown paper bag",
+            "Offer 1 pair of gloves if patiet is without gloves"
+        ],
+        "specialInstructions": [
+            "Instruct patient to collect about 1/3 of the sterile cup with stool and place in the freezer. Bring the frozen stool cup and the label form to Quest Lab for processing. Remember to remind patient to schedule appointment in advance before dropping off sample at Quest"
+        ]
+    },
+
+    {
+        "id": 13,
+        "name": "Stool Culture",
+        "fullImage": "stoolculture.jpg",
+        "instructions": [
+            "1 Orange Para-Pak CRS bottle. Check for expiration date",
+            "1 Lab label and a requisition form",
+            "1 Quest bag",
+            "1 Brown paper bag",
+            "Offer 1 pair of gloves if patiet is without gloves"
+        ],
+        "specialInstructions": [
+            "Instruct the patient to keep the clear liquid preservative in the bottle. Use small spoon attached to the cap to scoop the stool over the red line of the orange bottle. Store at room temperature. Bring specimen & lab form to Quest Lab for processing. Remember to remind patient to schedule appointment in advance before dropping off sample at Quest"
+        ]
+    },
+
+    {
+        "id": 14,
+        "name": "Stool O&P",
+        "fullImage": "stoolo&p.jpg",
+        "instructions": [
+            "3 Black \"Total-Fix\" O&P bottles. Check for expiration date. Label the top cap of each bottle as 1, 2, and 3 to indicate the day of collection.",
+            "3 Lab labels and a requisition form. Make sure the encounter label DOES NOT COVER the \"fill\" line.",
+            "1 Quest bag",
+            "1 Brown paper bag",
+            "Offer 3 pairs of gloves if patient is without gloves"
+        ],
+        "specialInstructions": [
+             "Instruct patient to keep the clear liquid of each bottle. Each bottle has a small spoon attached to the lid. Use this spoon to fill the bottle with stool until it reaches the black \"fill\" line. Collect 1 O&P bottle per day: one for Day 1, one for Day 2, and one for Day 3. Store at room temperature After collecting samples for 3 days, bring all the stool specimens and the lab form to Quest Lab for processing."
+        ]
+    },
+
+    {
+        "id": 15,
+        "name": "Suture Removal",
+        "fullImage": "sutureremoval.jpg",
+        "instructions": [
+            "Sterile suture removal kit (scissors and pick-up forceps)",
+            "2x2 gauze",
+            "4x4 gauze",
+            "Sterile strip",
+            "Paper tape"
+        ]
+    },
+
+    {
+        "id": 16,
+        "name": "Throat or Rectal GC/CT Test",
+        "fullImage": "gcctthroatrectal.jpg",
+        "instructions": [
+            "Show swab package open and swab stick handle 1/2 exposure",
+            "Ensure that each tube is labeled with the appropriate stickers - \"Throat\" or \"Rectal\" - if both types of tests are being conducted"
+        ]
+    },
+
+    {
+        "id": 17,
+        "name": "Urine GC/CT for Quest",
+        "fullImage": "gccturine.jpg",
+        "instructions": [
+            "Gloves",
+            "Plastic pipette to transfer",
+            "Dirty catch urine(first stream) in Quest cup",
+            "Fill the \"Apitma Urine Tube\" with urine to the level between the fill area window markers"
+        ]
+    },
+
+
+
+    
+    {
+        "id": 18,
+        "name": "Glucose",
+        "instructions": "To perform a glucose test, first prepare your glucose meter and insert a test strip if needed. Clean your finger with an alcohol swab and let it dry. Use a lancing device to prick the side of your fingertip and gently squeeze to obtain a drop of blood. Use the second drop of blood for testing. Apply the second drop to the test strip according to the meter’s instructions and wait for the meter to display your blood glucose level.",
+        "supplies": ["Lancet", "Bandaid", "CottonBall", "Alcohol Wipe", "Red Glucometer", "HemoCue Glucose Cuvettes from the Fridge" ]
+    },
+
+    {
+    
+        "id": 19,
+        "name": "IUD Removal",
+        "instructions": "",
+        "supplies": ["Ring Forcep", "Lubricant Bottle", "Speculum", "Drape", "Cotton Swabs"],
+        "images":["ringforcep.png", "lubricantbottle.png", "speculum.png", "drape.png", "cottonswabs.png"]
+    },
+
+    {
+        "id": 20,
+        "name": "IUD Setup",
+        "instructions": "",
+        "supplies": ["IUD Sterile Set", "Sterile Field", "Pad", "Sterile Gauze 2x2", "Drape",  "Extra Sterile Bag of Cotton Swab", "Lubricant Jelly", "Povidone/Betadine(Fill to 1/4 Cup)",  "Povidone Setup", "IUD Device: Mirena or Paraguard"],
+        "images":["iudsterileset.png", "sterilefield.png", "pad.png", "sterilegauze2x2.png", "drape.png", "cottonswabset.png", "lubricantjelly.png", "povidone.png", "povidonesetup.png"],
         "bulletPoints": [
-            "Collect sputum immediately after waking up.",
-            "Do not brush your teeth or drink water beforehand.",
-            "Ensure sputum (not saliva) reaches the line 5 mark on the tube.",
-            "If needed, keep coughing until the mucus reaches the line.",
-            "After collecting the mucus, place the sputum sample and the requisition form in the provided bag.",
-            "Store the bag in a regular refrigerator."
-        ],
-        "bulletPoints2": [
-            "Sunday, Monday, and Tuesday (Drop off on Tuesday at clinic)",
-            "Tuesday, Wednesday, and Thursday (Drop off on Thursday at clinic)"
-        ],
-        "bulletPoints3": [
-            "A sputum tube",
-            "A requisition lab form (Total 3 copies)",
-            "A completed public health form signed by the doctor (Total 3 copies)",
-            "Label each bag with the numbers 1, 2, and 3, as well as the collection date.",
-            "Mark the tube with a yellow highlighter for the patient to write the date of the sputum sample."
-        ],
-        "bulletPoints4": [
-            "Include the patient's first and last name",
-            "Date of Birth (DOB)",
-            "The corresponding day number (1, 2, or 3)"
-        ],
-        "bulletPoints5": [
-            "Place a copy of the public health form in the medical records box for scanning"
-        ],
-        "supplies": ["Bag","Tube", "Public Health Specimen Form", "Requisition Lab Slip"],
-        "images":["bag.png", "tube.png", "specimen_form.png", "requisition.png"],
-        "fullImage": "logo192.png"
+            "IUD Sterile Set: Located in the left cabinet on the far side of the utility room",
+            "Sterile Field: Central section of the cabinet high above within the utility room",
+            "Pad: In the exam room, under the bed where you'll see all the speculums.",
+            "Sterile Gauze 2x2: Central section of the back room's far left side",
+            "Drape: In the exam room, in one of those cabinets below",
+            "Extra Sterile Bag of Cotton Swab: Central section of the utility room where you find all of the procedure tools",
+            "Lubricant Jelly: In the exam room, in one of those cabinets above",
+            "Povidone/Betadine: In the exam room, in one of those cabinets above",
+            "IUD Device: Mirena or Paraguard: Right section of the cabinet within the utility room"
+        ]
+    },
+
+    {
+        "id": 21,
+        "name": "Knee Injection",
+        "instructions":"Ensure all items are in the procedure cart. Note that Kenalog-10 and Kenalog-40 are for \"ONE-TIME USE ONLY\"; discard them after the doctor has finished. For Lidocaine bottles, write the expiration date after opening. Record the open date and the expiration date, which is 28 days later.",
+        "supplies": ["Kenalog-10", "Kenalog-40", "Lidocaine HCI", "Xylocaine HCI with Epinephrine", "Procedure Cart"],
+        "images":["kenalog10.png", "kenalog40.png", "lidocaineHCI.png", "xylocaineHCI.png"],
+        "fullImage": "kneeinjectionsetup.png",
+        "video": "https://www.youtube.com/embed/BxvDmjRG8dM"
+        
+    },
+
+    {
+        "id": 22,
+        "name": "Salmonella",
+        "supplies": ["Para-Pak"],
+        "images":["salmonella.png"]
+    },
+
+    {
+        "id": 23,
+        "name": "Staple Removal",
+        "instructions": "Retrieve a \"Skin Staple Remover\" from the inventory room for the doctor. Please note that it is for \"SINGLE USE ONLY\" and should be discarded after the doctor has finished using it.",
+        "supplies": ["Staple Remover Front View", "Staple Remove Back View"],
+        "images":["stapleremoverfront.png", "stapleremoverback.png"]
     }
 ]
