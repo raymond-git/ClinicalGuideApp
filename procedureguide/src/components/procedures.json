@@ -166,6 +166,17 @@
                     "Tuesday, Wednesday, and Thursday (Drop off on Thursday at clinic)"
                 ]
             },
+            
+            {
+                "subname": "Prepare sputum kit for the patient:",
+                "instructions": [
+                    "Sputum tube(Label patient's first and last name, DOB, and the corresponding day number (1, 2, or 3)",
+                    "Mark the tube with a yellow highlighter for the patient to write the date of the sputum sample collection.",
+                    "Requisition lab form (Make 3 copies)",
+                    "Completed public health form signed by the doctor (Make 3 copies). Make sure to tell patient to write the onset date on the form as well" ,
+                    "Label each bag with the numbers 1, 2, and 3, as well as the collection date."
+                ]
+            },
 
             {
                 "subname": "Patient Instructions for Morning Sputum Collection:",
@@ -177,18 +188,8 @@
                     "Place the sputum sample and requisition form in the provided bag after collection",
                     "Store the bag in a regular refrigerator and return it to the clinic on the final day of testing, so the 3rd day."
                 ]
-            },
-            
-            {
-                "subname": "Prepare sputum kit for the patient:",
-                "instructions": [
-                    "Sputum tube(Label patient's first and last name, DOB, and the corresponding day number (1, 2, or 3)",
-                    "Requisition lab form (Total 3 copies)",
-                    "Completed public health form signed by the doctor (Total 3 copies). Make sure to tell patient to write the onset date on the form as well" ,
-                    "Label each bag with the numbers 1, 2, and 3, as well as the collection date.",
-                    "Mark the tube with a yellow highlighter for the patient to write the date of the sputum sample collection."
-                ]
             }
+
         ],
         "specialInstructions": [
            "Remember to place a copy of the completed public health form in the medical records box for scanning"
@@ -293,7 +294,6 @@
     
         "id": 19,
         "name": "IUD Removal",
-        "instructions": "",
         "supplies": ["Ring Forcep", "Lubricant Bottle", "Speculum", "Drape", "Cotton Swabs"],
         "images":["ringforcep.png", "lubricantbottle.png", "speculum.png", "drape.png", "cottonswabs.png"]
     },
@@ -322,10 +322,7 @@
         "name": "Knee Injection",
         "instructions":"Ensure all items are in the procedure cart. Note that Kenalog-10 and Kenalog-40 are for \"ONE-TIME USE ONLY\"; discard them after the doctor has finished. For Lidocaine bottles, write the expiration date after opening. Record the open date and the expiration date, which is 28 days later.",
         "supplies": ["Kenalog-10", "Kenalog-40", "Lidocaine HCI", "Xylocaine HCI with Epinephrine", "Procedure Cart"],
-        "images":["kenalog10.png", "kenalog40.png", "lidocaineHCI.png", "xylocaineHCI.png"],
-        "fullImage": "kneeinjectionsetup.png",
-        "video": "https://www.youtube.com/embed/BxvDmjRG8dM"
-        
+        "images":["kenalog10.png", "kenalog40.png", "lidocaineHCI.png", "xylocaineHCI.png"]
     },
 
     {

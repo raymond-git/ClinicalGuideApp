@@ -52,12 +52,12 @@ const Homepage = () => {
                 <div className="mt-32">
                     <div className="font-serif font-bold text-center text-2xl lg:text-4xl">Clinical Procedure Lookup</div>
                     {/* <p className='font-serif text-center text-xl mt-8'>Search for medical procedures, view required items, and access step-by-step instructions with images.</p> */}
-                    {/* <p className='lg:text-xl text-rose-600 font-bold text-center mt-8'>
+                    <p className='lg:text-xl text-rose-600 font-bold text-center mt-8'>
                         Testing Phase! Please either copy and paste the procedures listed below or enter them into the search bar for results.
                     </p>
                     <p className='mt-8'>
                         A1C, Endocervical Female GC/CT Test, ER, Group B Step (GBS) Swab Tray, Hemoglobin, Incision and Drainage of Abscess, Male Urethral Swab GC/CT Test, PAP - Thin Prep Set, Plantar Wart Tray Set Up, Rectal Exam Tray Set Up, Sputum Instructions, Stool C. diff, Stool Culture, Stool O&P, Suture Removal, Throat or Rectal GC/CT Test, Urine GC/CT for Quest
-                    </p> */}
+                    </p>
 
                     <div className="input-group mt-20">
                         <input
@@ -142,7 +142,7 @@ const Homepage = () => {
                                         </div>
                                     ))
                                 ) : (
-                                    <p>Not available yet hehehehehe:) Work in progress!</p>
+                                    <p>Not available yet hehehehehe:) Work in progress! Waiting for pictures to be taken</p>
                                 )}
                                 <p className='font-serif text-base lg:text-xl mt-12'>{selectedItem.procedureSpecialInstructions}</p>
                             </div>
