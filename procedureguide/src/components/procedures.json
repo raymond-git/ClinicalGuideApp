@@ -160,7 +160,7 @@
         "name": "Sputum Instructions",
         "subnames": [
             {
-                "subname": "Patient's Sputum Sample Collection Date",
+                "subname": "Patient's Sputum Sample Collection Date:",
                 "instructions": [
                     "Sunday, Monday, and Tuesday (Drop off on Tuesday at clinic)",
                     "Tuesday, Wednesday, and Thursday (Drop off on Thursday at clinic)"
@@ -180,7 +180,7 @@
             },
             
             {
-                "subname": "Prepare sputum kit for the patient",
+                "subname": "Prepare sputum kit for the patient:",
                 "instructions": [
                     "Sputum tube(Label patient's first and last name, DOB, and the corresponding day number (1, 2, or 3)",
                     "Requisition lab form (Total 3 copies)",
