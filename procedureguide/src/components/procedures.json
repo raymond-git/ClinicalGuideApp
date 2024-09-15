@@ -182,7 +182,7 @@
             {
                 "subname": "Prepare sputum kit for the patient",
                 "instructions": [
-                    "Sputum tube(Label patient's first and last name, DOB, and The corresponding day number (1, 2, or 3)",
+                    "Sputum tube(Label patient's first and last name, DOB, and the corresponding day number (1, 2, or 3)",
                     "Requisition lab form (Total 3 copies)",
                     "Completed public health form signed by the doctor (Total 3 copies). Make sure to tell patient to write the onset date on the form as well" ,
                     "Label each bag with the numbers 1, 2, and 3, as well as the collection date.",

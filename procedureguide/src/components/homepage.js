@@ -128,12 +128,12 @@ const Homepage = () => {
                                 {selectedItem.procedureSubNames && selectedItem.procedureSubNames.length > 0 ? (
                                     selectedItem.procedureSubNames.map((subnameItem, index) => (
                                         <div key={index} className="mb-12">
-                                            <h2 className='text-base lg:text-xl font-semibold mb-4'>{subnameItem.subname}</h2>
+                                            <h2 className='font-serif text-base lg:text-xl font-semibold mb-4'>{subnameItem.subname}</h2>
                                             <h2 className='text-base lg:text-lg mb-4'>{subnameItem.subheading}</h2>
                     
                                            
                                             {/* <ul className='content-center fancy-list text-xl mt-4 list-decimal pl-4'> */}
-                                            <ul className='text-sm lg:text-lg list-decimal pl-4'>
+                                            <ul className='text-base lg:text-lg list-decimal pl-4'>
                                                 {subnameItem.instructions.map((bullet, bulletIndex) => (
                                                     <li key={bulletIndex}>{bullet}</li>
                                                 ))}
@@ -144,7 +144,7 @@ const Homepage = () => {
                                 ) : (
                                     <p>Not available yet hehehehehe:) Work in progress!</p>
                                 )}
-                                <p className='font-serif lg:text-xl mt-12'>{selectedItem.procedureSpecialInstructions}</p>
+                                <p className='font-serif text-base lg:text-xl mt-12'>{selectedItem.procedureSpecialInstructions}</p>
                             </div>
                         )}
                     </div>
