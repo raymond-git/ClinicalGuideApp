@@ -45,19 +45,55 @@ const Homepage = () => {
         setFilteredItems([]); // Clear the suggestions
     };
 
+    const listItemStyle = {
+        paddingLeft: '1.0rem',  // Adjust this to control overall indentation
+        textIndent: '-0.10rem'   // Adjust this to align wrapped lines with the first line
+      };
+
     return (
         <div>
             <Navbar />
+            <div className="flex flex-row">
+            <div className="lg:flex flex-row lg:gap-x-10 lg:mt-10">
+    <details class="mb-4">
+        <summary class="text-xl text-red-300">Procedure Lists</summary>
+      
+        <ul class="gap-4 mt-4 list-inside">
+            <li class="pl-6 text-indent">A1C</li>
+            <li class="pl-6 text-indent">Hemoglobin</li>
+            <li class="pl-6 text-indent">Endocervical Female GC/CT Test</li>
+            <li class="pl-6 text-indent">Group B Step (GBS) Swab Tray</li>
+            <li class="pl-6 text-indent">Male Urethral Swab GC/CT Test</li>
+            <li class="pl-6 text-indent">Throat or Rectal GC/CT Test</li>
+            <li class="pl-6 text-indent">Stool C. diff</li>
+            <li class="pl-6 text-indent">Stool Culture</li>
+            <li class="pl-6 text-indent">Stool O&P</li>
+            <li class="pl-6 text-indent">Urine GC/CT for Quest</li>
+            <li class="pl-6 text-indent">Sputum Instructions</li>
+            <li class="pl-6 text-indent">Incision and Drainage of Abscess</li>
+            <li class="pl-6 text-indent">Suture Removal</li>
+            <li class="pl-6 text-indent">PAP - Thin Prep Set</li>
+            <li class="pl-6 text-indent">ER</li>
+            <li class="pl-6 text-indent">Plantar Wart Tray Set Up</li>
+            <li class="pl-6 text-indent">Rectal Exam Tray Set Up</li>
+        </ul>
+    </details>
+</div>
+
             <div className='mx-10 lg:mx-60 xl:mx-96 my-12'>
                 <div className="mt-32">
                     <div className="font-serif font-bold text-center text-2xl lg:text-4xl">Clinical Procedure Lookup</div>
                     {/* <p className='font-serif text-center text-xl mt-8'>Search for medical procedures, view required items, and access step-by-step instructions with images.</p> */}
                     <p className='lg:text-xl text-rose-600 font-bold text-center mt-8'>
-                        Testing Phase! Please either copy and paste the procedures listed below or enter them into the search bar for results.
+                        Testing Phase! Please either copy and paste the procedure lists below or enter them into the search bar for results.
                     </p>
-                    <p className='mt-8'>
+                    {/* <p className='mt-8'>
                         A1C, Endocervical Female GC/CT Test, ER, Group B Step (GBS) Swab Tray, Hemoglobin, Incision and Drainage of Abscess, Male Urethral Swab GC/CT Test, PAP - Thin Prep Set, Plantar Wart Tray Set Up, Rectal Exam Tray Set Up, Sputum Instructions, Stool C. diff, Stool Culture, Stool O&P, Suture Removal, Throat or Rectal GC/CT Test, Urine GC/CT for Quest
-                    </p>
+                    </p> */}
+                    
+
+
+                    
 
                     <div className="input-group mt-20">
                         <input
@@ -150,6 +186,8 @@ const Homepage = () => {
                     </div>
                 )}
             </div>
+            </div>
+            
             <Footer />
         </div>
     );

@@ -8,6 +8,9 @@ module.exports = {
         '16': '16px',  // Add more if needed
         // You can add more custom values here
       },
+      spacing: {
+        'indent': '1.5rem',  // Adjust this value as needed
+      },
     },
   },
   plugins: [],
