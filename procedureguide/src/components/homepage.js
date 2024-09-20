@@ -71,7 +71,7 @@ const Homepage = () => {
                             <li className="nav-item" key={procedure.id}>
                                 <a
                                     className="nav-link text-white hover:text-white"
-                                    href="#"
+                                    href="#!"
                                     onClick={() => handleItemClickNavbar(procedure)} // Add this line
                                 >
                                     <i className="nav-icon cil-speedometer text-white"></i> {procedure.name}
