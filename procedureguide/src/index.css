@@ -71,3 +71,16 @@ ul.fancy-list li:hover {
 ul.fancy-list li:hover::before {
   color: #fff;
 }
+
+.sidebar {
+    position: relative;
+}
+
+.sidebar-nav {
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.subheadingtitle {
+  color: gray
+  
+}

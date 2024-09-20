@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import proceduresData from '../components/procedures.json'; // Adjust path as needed
-import Navbar from "./navbar";
-import Footer from "./footer";
 
 const Homepage = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -45,59 +43,54 @@ const Homepage = () => {
         setFilteredItems([]); // Clear the suggestions
     };
 
-    const listItemStyle = {
-        paddingLeft: '1.0rem',  // Adjust this to control overall indentation
-        textIndent: '-0.10rem'   // Adjust this to align wrapped lines with the first line
-      };
+
+    const handleItemClickNavbar = (procedure) => {
+        setSelectedItem({
+            procedureId: procedure.id,
+            procedureName: procedure.name,
+            procedureInstructions: procedure.instructions,
+            procedureSubNames: procedure.subnames,
+            procedureSpecialInstructions: procedure.specialInstructions,
+            procedureImageUrls: procedure.fullImage,
+        });
+        setFilteredItems([]); // Clear the suggestions
+    }
 
     return (
         <div>
-            <Navbar />
-            <div className="flex items-stretch">
+            {/* <Navbar /> */}
+            <div className="flex h-screen">
 
-                <div className="text-center border-4">
-                <div className="lg:flex flex-row lg:gap-x-10 lg:mt-4">
-                    <details class="mb-4">
-                        <summary class="text-xl text-center">Procedures</summary>
-
-                        <ul class="gap-4 mt-4 list-inside text-left mr-4">
-                            <li class="pl-6 text-indent">A1C</li>
-                            <li class="pl-6 text-indent">Hemoglobin</li>
-                            <li class="pl-6 text-indent">Endocervical Female GC/CT Test</li>
-                            <li class="pl-6 text-indent">Group B Step (GBS) Swab Tray</li>
-                            <li class="pl-6 text-indent">Male Urethral Swab GC/CT Test</li>
-                            <li class="pl-6 text-indent">Throat or Rectal GC/CT Test</li>
-                            <li class="pl-6 text-indent">Stool C. diff</li>
-                            <li class="pl-6 text-indent">Stool Culture</li>
-                            <li class="pl-6 text-indent">Stool O&P</li>
-                            <li class="pl-6 text-indent">Urine GC/CT for Quest</li>
-                            <li class="pl-6 text-indent">Sputum Instructions</li>
-                            <li class="pl-6 text-indent">Incision and Drainage of Abscess</li>
-                            <li class="pl-6 text-indent">Suture Removal</li>
-                            <li class="pl-6 text-indent">PAP - Thin Prep Set</li>
-                            <li class="pl-6 text-indent">ER</li>
-                            <li class="pl-6 text-indent">Plantar Wart Tray Set Up</li>
-                            <li class="pl-6 text-indent">Rectal Exam Tray Set Up</li>
-                            
-                        </ul>
-                    </details>
+                <div className="sidebar sidebar-narrow-unfoldable border-end bg-black" style={{ minHeight: '100vh' }}>
+                    <div className="sidebar-header border-bottom">
+                        <div className="text-white">AHS</div>
+                    </div>
+                    <ul className="sidebar-nav flex-1 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 64px)' }}>
+                        <li className="nav-title text-white">Table of Content</li>
+                        {proceduresData.map(procedure => (
+                            <li className="nav-item" key={procedure.id}>
+                                <a
+                                    className="nav-link text-white hover:text-white"
+                                    href="#"
+                                    onClick={() => handleItemClickNavbar(procedure)} // Add this line
+                                >
+                                    <i className="nav-icon cil-speedometer text-white"></i> {procedure.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
-                </div>
-
-
-                <div className='flex-grow mx-10 lg:mx-60 xl:mx-96 my-12'>
+                <div className='flex-grow mx-10 lg:mx-60 xl:mx-96'>
                     <div className="mt-32">
                         <div className="font-serif font-bold text-center text-2xl lg:text-4xl">Clinical Procedure Lookup</div>
                         {/* <p className='font-serif text-center text-xl mt-8'>Search for medical procedures, view required items, and access step-by-step instructions with images.</p> */}
-                        <p className='lg:text-xl text-rose-600 font-bold text-center mt-8'>
+                        {/* <p className='lg:text-xl text-rose-600 font-bold text-center mt-8'>
                             Testing Phase! Please either copy and paste the procedure lists or enter them into the search bar for results.
-                        </p>
+                        </p> */}
+                        <p className='subheadingtitle lg:text-base font-bold text-center mt-8'>Discover medical procedures with items, instructions, and images for clear guidance.</p>
                         {/* <p className='mt-8'>
                         A1C, Endocervical Female GC/CT Test, ER, Group B Step (GBS) Swab Tray, Hemoglobin, Incision and Drainage of Abscess, Male Urethral Swab GC/CT Test, PAP - Thin Prep Set, Plantar Wart Tray Set Up, Rectal Exam Tray Set Up, Sputum Instructions, Stool C. diff, Stool Culture, Stool O&P, Suture Removal, Throat or Rectal GC/CT Test, Urine GC/CT for Quest
                     </p> */}
-
-
-
 
 
                         <div className="input-group mt-20">
@@ -161,7 +154,7 @@ const Homepage = () => {
                                             <li key={index}>{bullet}</li>
                                         ))}
                                     </ul>
-                                    <p className='font-serif text-base lg:text-xl mt-12'>{selectedItem.procedureSpecialInstructions}</p>
+                                    <p className='font-serif text-base lg:text-xl pb-12'>{selectedItem.procedureSpecialInstructions}</p>
                                 </div>
                             ) : (
                                 <div>
@@ -185,7 +178,7 @@ const Homepage = () => {
                                     ) : (
                                         <p>Not available yet hehehehehe:) Work in progress! Waiting for pictures to be taken</p>
                                     )}
-                                    <p className='font-serif text-base lg:text-xl mt-12'>{selectedItem.procedureSpecialInstructions}</p>
+                                    <p className='font-serif text-base lg:text-xl pb-12'>{selectedItem.procedureSpecialInstructions}</p>
                                 </div>
                             )}
                         </div>
@@ -193,7 +186,7 @@ const Homepage = () => {
                 </div>
             </div>
 
-            <Footer />
+
         </div>
     );
 };
