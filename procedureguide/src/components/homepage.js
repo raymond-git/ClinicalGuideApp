@@ -58,9 +58,7 @@ const Homepage = () => {
 
     return (
         <div>
-            {/* <Navbar /> */}
             <div className="flex h-screen">
-
                 <div className="sidebar sidebar-narrow-unfoldable border-end bg-black" style={{ minHeight: '100vh' }}>
                     <div className="sidebar-header border-bottom">
                         <div className="text-white">AHS</div>
@@ -79,19 +77,15 @@ const Homepage = () => {
                             </li>
                         ))}
                     </ul>
+
                 </div>
                 <div className='flex-grow mx-10 lg:mx-60 xl:mx-96'>
                     <div className="mt-32">
                         <div className="font-serif font-bold text-center text-2xl lg:text-4xl">Clinical Procedure Lookup</div>
-                        {/* <p className='font-serif text-center text-xl mt-8'>Search for medical procedures, view required items, and access step-by-step instructions with images.</p> */}
-                        {/* <p className='lg:text-xl text-rose-600 font-bold text-center mt-8'>
-                            Testing Phase! Please either copy and paste the procedure lists or enter them into the search bar for results.
-                        </p> */}
-                        <p className='subheadingtitle lg:text-base font-bold text-center mt-8'>Discover medical procedures with items, instructions, and images for clear guidance.</p>
+                        <p className='subheadingtitle lg:text-base text-center mt-8 italic'>Discover medical procedures with items, instructions, and images for clear guidance.</p>
                         {/* <p className='mt-8'>
                         A1C, Endocervical Female GC/CT Test, ER, Group B Step (GBS) Swab Tray, Hemoglobin, Incision and Drainage of Abscess, Male Urethral Swab GC/CT Test, PAP - Thin Prep Set, Plantar Wart Tray Set Up, Rectal Exam Tray Set Up, Sputum Instructions, Stool C. diff, Stool Culture, Stool O&P, Suture Removal, Throat or Rectal GC/CT Test, Urine GC/CT for Quest
                     </p> */}
-
 
                         <div className="input-group mt-20">
                             <input
@@ -140,7 +134,6 @@ const Homepage = () => {
                     {selectedItem && (
                         <div className="mt-20">
                             <p className='text-2xl lg:text-3xl font-bold mb-4'>{selectedItem.procedureName}</p>
-
                             {/* Conditionally render based on the presence of an image */}
                             {selectedItem.procedureImageUrls ? (
                                 <div>
@@ -185,8 +178,6 @@ const Homepage = () => {
                     )}
                 </div>
             </div>
-
-
         </div>
     );
 };
