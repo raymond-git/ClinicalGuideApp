@@ -20,6 +20,7 @@ const Homepage = () => {
             const resultsToDisplay = filteredResults.map(procedure => ({
                 procedureId: procedure.id,
                 procedureName: procedure.name,
+                procedureAbbreviation: procedure.abbreviation,
                 procedureInstructions: procedure.instructions,
                 procedureSubNames: procedure.subnames,
                 procedureSubHeadings: procedure.subheading,
@@ -63,16 +64,16 @@ const Homepage = () => {
                     <div className="sidebar-header border-bottom">
                         <div className="text-white">AHS</div>
                     </div>
-                    <ul className="sidebar-nav flex-1 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 64px)' }}>
+                    <ul className="overflow sidebar-nav flex-1 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 64px)' }}>
                         <li className="nav-title text-white">Table of Content</li>
                         {proceduresData.map(procedure => (
                             <li className="nav-item" key={procedure.id}>
                                 <a
-                                    className="nav-link text-white hover:text-white"
+                                    className="nav-link text-white"
                                     href="#!"
                                     onClick={() => handleItemClickNavbar(procedure)} // Add this line
                                 >
-                                    <i className="nav-icon cil-speedometer text-white"></i> {procedure.name}
+                                    <i className="nav-icon cil-speedometer"></i> {procedure.abbreviation}
                                 </a>
                             </li>
                         ))}

@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "A1C",
+        "abbreviation": "A1C",
         "fullImage": "a1c.jpg",
         "instructions": [
             "Lancet",
@@ -19,6 +20,7 @@
     {
         "id": 2,
         "name": "Endocervical Female GC/CT Test",
+        "abbreviation": "Female GC/CT Test",
         "fullImage": "gcctfemale.jpg",
         "instructions": [
             "Show swab package open and swab stick handle 1/2 exposure"
@@ -27,7 +29,8 @@
 
     {
         "id": 3,
-        "name": "ER",
+        "name": "Emergency Transportation",
+        "abbreviation": "ER Transportation",
         "subnames": [
             {
                 "subname": "Instructions for (Taxi) Arrangements to Hospital:",
@@ -54,7 +57,8 @@
 
     {
         "id": 4,
-        "name": "Group B Step (GBS) Swab Tray (>35 weeks pregnancy)",
+        "name": "Group B Strep (GBS) Swab Tray (>35 weeks pregnancy)",
+        "abbreviation": "GBS Strep Swab Tray",
         "fullImage": "gbs.jpg",
         "instructions": [
             "Undress waist down",
@@ -67,6 +71,7 @@
     {
         "id": 5,
         "name": "Hemoglobin",
+        "abbreviation": "Hemoglobin",
         "fullImage": "hemoglobin.jpg",
         "instructions": [
             "Lancet",
@@ -84,6 +89,7 @@
     {
         "id": 6,
         "name": "Incision and Drainage of Abscess",
+        "abbreviation": "Incision and Drainage",
         "fullImage": "incisiondrainageabscess.jpg",
         "instructions": [
             "Sterile field (Non-Fenestrated)",
@@ -106,6 +112,7 @@
     {
         "id": 7,
         "name": "Male Urethral Swab GC/CT Test",
+        "abbreviation": "Male GC/CT Test",
         "fullImage": "gcctmale.jpg",
         "instructions": [
             "Show swab package open and swab stick handle 1/2 exposure"
@@ -115,6 +122,7 @@
     {
         "id": 8,
         "name": "PAP - Thin Prep Set",
+        "abbreviation": "PAP - Thin Prep Set",
         "fullImage": "papthinprep.jpg",
         "instructions": [
             "Container for the thin prep jar",
@@ -132,6 +140,7 @@
     {
         "id": 9,
         "name": "Plantar Wart Tray Set Up",
+        "abbreviation": "Plantar Wart Tray Set Up",
         "fullImage": "plantarwart.jpg",
         "instructions": [
             "Sprayer with Liquid Nitrogen filled to 1/4",
@@ -142,6 +151,7 @@
     {
         "id": 10,
         "name": "Rectal Exam Tray Set Up",
+        "abbreviation": "Rectal Exam Tray Set Up",
         "fullImage": "rectalexam.jpg",
         "instructions": [
             "Lubricant",
@@ -158,6 +168,7 @@
     {
         "id": 11,
         "name": "Sputum Instructions",
+        "abbreviation": "Sputum Instructions",
         "subnames": [
             {
                 "subname": "Patient's Sputum Sample Collection Date:",
@@ -199,6 +210,7 @@
     {
         "id": 12,
         "name": "Stool C. diff",
+        "abbreviation": "Stool C. diff",
         "fullImage": "stoolcdiff.jpg",
         "instructions": [
             "1 Green sterile cup",
@@ -216,6 +228,7 @@
     {
         "id": 13,
         "name": "Stool Culture",
+        "abbreviation": "Stool Culture",
         "fullImage": "stoolculture.jpg",
         "instructions": [
             "1 Orange Para-Pak CRS bottle. Check for expiration date",
@@ -232,6 +245,7 @@
     {
         "id": 14,
         "name": "Stool O&P",
+        "abbreviation": "Stool O&P",
         "fullImage": "stoolo&p.jpg",
         "instructions": [
             "3 Black \"Total-Fix\" O&P bottles. Check for expiration date. Label the top cap of each bottle as 1, 2, and 3 to indicate the day of collection.",
@@ -248,6 +262,7 @@
     {
         "id": 15,
         "name": "Suture Removal",
+        "abbreviation": "Suture Removal",
         "fullImage": "sutureremoval.jpg",
         "instructions": [
             "Sterile suture removal kit (scissors and pick-up forceps)",
@@ -261,6 +276,7 @@
     {
         "id": 16,
         "name": "Throat or Rectal GC/CT Test",
+        "abbreviation": "Throat or Rectal Test",
         "fullImage": "gcctthroatrectal.jpg",
         "instructions": [
             "Show swab package open and swab stick handle 1/2 exposure",
@@ -271,6 +287,7 @@
     {
         "id": 17,
         "name": "Urine GC/CT for Quest",
+        "abbreviation": "Urine GC/CT for Quest",
         "fullImage": "gccturine.jpg",
         "instructions": [
             "Gloves",
@@ -286,6 +303,7 @@
     {
         "id": 18,
         "name": "Glucose",
+        "abbreviation": "Glucose",
         "instructions": "To perform a glucose test, first prepare your glucose meter and insert a test strip if needed. Clean your finger with an alcohol swab and let it dry. Use a lancing device to prick the side of your fingertip and gently squeeze to obtain a drop of blood. Use the second drop of blood for testing. Apply the second drop to the test strip according to the meter’s instructions and wait for the meter to display your blood glucose level.",
         "supplies": ["Lancet", "Bandaid", "CottonBall", "Alcohol Wipe", "Red Glucometer", "HemoCue Glucose Cuvettes from the Fridge" ]
     },
@@ -294,6 +312,7 @@
     
         "id": 19,
         "name": "IUD Removal",
+        "abbreviation": "IUD Removal",
         "supplies": ["Ring Forcep", "Lubricant Bottle", "Speculum", "Drape", "Cotton Swabs"],
         "images":["ringforcep.png", "lubricantbottle.png", "speculum.png", "drape.png", "cottonswabs.png"]
     },
@@ -301,6 +320,7 @@
     {
         "id": 20,
         "name": "IUD Setup",
+        "abbreviation": "IUD Setup",
         "instructions": "",
         "supplies": ["IUD Sterile Set", "Sterile Field", "Pad", "Sterile Gauze 2x2", "Drape",  "Extra Sterile Bag of Cotton Swab", "Lubricant Jelly", "Povidone/Betadine(Fill to 1/4 Cup)",  "Povidone Setup", "IUD Device: Mirena or Paraguard"],
         "images":["iudsterileset.png", "sterilefield.png", "pad.png", "sterilegauze2x2.png", "drape.png", "cottonswabset.png", "lubricantjelly.png", "povidone.png", "povidonesetup.png"],
@@ -320,6 +340,7 @@
     {
         "id": 21,
         "name": "Knee Injection",
+        "abbreviation": "Knee Injection",
         "instructions":"Ensure all items are in the procedure cart. Note that Kenalog-10 and Kenalog-40 are for \"ONE-TIME USE ONLY\"; discard them after the doctor has finished. For Lidocaine bottles, write the expiration date after opening. Record the open date and the expiration date, which is 28 days later.",
         "supplies": ["Kenalog-10", "Kenalog-40", "Lidocaine HCI", "Xylocaine HCI with Epinephrine", "Procedure Cart"],
         "images":["kenalog10.png", "kenalog40.png", "lidocaineHCI.png", "xylocaineHCI.png"]
@@ -328,6 +349,7 @@
     {
         "id": 22,
         "name": "Salmonella",
+        "abbreviation": "Salmonella",
         "supplies": ["Para-Pak"],
         "images":["salmonella.png"]
     },
@@ -335,6 +357,7 @@
     {
         "id": 23,
         "name": "Staple Removal",
+        "abbreviation": "Staple Removal",
         "instructions": "Retrieve a \"Skin Staple Remover\" from the inventory room for the doctor. Please note that it is for \"SINGLE USE ONLY\" and should be discarded after the doctor has finished using it.",
         "supplies": ["Staple Remover Front View", "Staple Remove Back View"],
         "images":["stapleremoverfront.png", "stapleremoverback.png"]

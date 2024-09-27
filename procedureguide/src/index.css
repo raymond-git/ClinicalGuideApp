@@ -84,3 +84,16 @@ ul.fancy-list li:hover::before {
   color: gray
   
 }
+
+.overflow {
+  overflow-y: scroll;
+}
+
+.overflow {
+  display: none
+}
+
+.overflow {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
