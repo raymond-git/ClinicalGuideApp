@@ -296,9 +296,6 @@
             "Fill the \"Apitma Urine Tube\" with urine to the level between the fill area window markers"
         ]
     },
-
-
-
     
     {
         "id": 18,
@@ -348,14 +345,6 @@
 
     {
         "id": 22,
-        "name": "Salmonella",
-        "abbreviation": "Salmonella",
-        "supplies": ["Para-Pak"],
-        "images":["salmonella.png"]
-    },
-
-    {
-        "id": 23,
         "name": "Staple Removal",
         "abbreviation": "Staple Removal",
         "instructions": "Retrieve a \"Skin Staple Remover\" from the inventory room for the doctor. Please note that it is for \"SINGLE USE ONLY\" and should be discarded after the doctor has finished using it.",

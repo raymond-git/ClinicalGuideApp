@@ -84,10 +84,6 @@ const Homepage = () => {
                     <div className="mt-32">
                         <div className="font-serif font-bold text-center text-2xl lg:text-4xl">Clinical Procedure Lookup</div>
                         <p className='subheadingtitle lg:text-base text-center mt-8 italic'>Discover medical procedures with items, instructions, and images for clear guidance.</p>
-                        {/* <p className='mt-8'>
-                        A1C, Endocervical Female GC/CT Test, ER, Group B Step (GBS) Swab Tray, Hemoglobin, Incision and Drainage of Abscess, Male Urethral Swab GC/CT Test, PAP - Thin Prep Set, Plantar Wart Tray Set Up, Rectal Exam Tray Set Up, Sputum Instructions, Stool C. diff, Stool Culture, Stool O&P, Suture Removal, Throat or Rectal GC/CT Test, Urine GC/CT for Quest
-                    </p> */}
-
                         <div className="input-group mt-20">
                             <input
                                 type="search"
