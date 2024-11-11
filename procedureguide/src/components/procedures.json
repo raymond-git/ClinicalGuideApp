@@ -35,21 +35,24 @@
             {
                 "subname": "Instructions for (Taxi) Arrangements to Hospital:",
                 "instructions": [
-                    "Double-check with the patient before calling the taxi to ensure they still want it, as plans can change",
                     "Confirm the hospital name with the doctor (e.g., \"Summit ER Hospital\")",
+                    "Double-check with the patient before calling the taxi to ensure they still want it, as plans can change",
                     "Get a taxi voucher form from the nursing room on the 2nd floor, if not 3rd floor. Tear off the first page for the driver after finished filling in and keep the second slip for records",
                     "Call a taxi and specify \"Summit Hospital\" as the destination. If asked about payment, mention it's a taxi voucher. Provide the phone number (510) 318-5800 or clinic address 835 Webster Street Oakland CA 94607 if needed",
-                    "Ask the PSR to print the face sheet and referral, and I will print the signed progress note (indicated by a check mark) to give to the patient",
+                    "Have the PSR print the face sheet and referral. The health coach will print the doctor's signed progress notes. Give all documents to the patient to bring to the hospital.",
                     "Inform downstairs PSR and receptionist (extension 5801) about the taxi arriving to pick up the patient"
                 ]
             },
             {
                 "subname": "Instructions for (Transportation) Arrangements to Hospital:",
                 "instructions": [
-                    "Ask the provider the reason the patient is going to the ER",
+                    "Confirm with the provider the reason the patient is going to the ER",
+                    "Confirm with the provider whether we need special equipment, as they sometimes ask for it.",
+                    "Have the PSR print the face sheet and referral. The health coach will print the doctor's signed progress notes. Provide all documents to the EMTs upon arrival",
                     "Call (510) 444-1616 requesting for \"TRANSPORTATION ONLY\"",
+                    "Please indicate which foor and room number the patient is in",
                     "Address: 835 Webster Street Oakland CA 94607, Rolland & Kathryne Lowe Medical Center",
-                    "Special Equipment: Sometimes they ask if patient needs special equipment, confirm with doctor"
+                    "Inform downstairs PSR and receptionist (extension 5801) about the EMTs arriving to pick up the patient. Please indicate which floor and room number the patient is in to the PSR"
                 ]
             }
         ]
@@ -67,7 +70,8 @@
             "Alcohol Prep Pads",
             "HemoCue Glucose Cuvette(from the second floor small fridge)",
             "Red Glucometer"
-        ]
+        ],
+        "specialInstructions" : "Puncture the finger with a lancet and obtain \"2nd drop\" of blood"
     },
 
     {
@@ -372,37 +376,74 @@
         "id": 22,
         "name": "IUD Removal",
         "abbreviation": "IUD Removal",
-        "supplies": ["Ring Forcep", "Lubricant Bottle", "Speculum", "Drape", "Cotton Swabs"],
-        "images":["ringforcep.png", "lubricantbottle.png", "speculum.png", "drape.png", "cottonswabs.png"]
+        "fullImage": "iudremoval.jpg",
+        "instructions": [
+            "Ring forceps(sterile)",
+            "Gloves",
+            "Speculum(medium)",
+            "Blue tray towel under table exam paper"
+        ],
+        "specialInstructions":["Instruct patient to undress from waist down and use paper drape to cover"]
     },
 
     {
         "id": 23,
-        "name": "IUD Setup",
-        "abbreviation": "IUD Setup",
-        "instructions": "",
-        "supplies": ["IUD Sterile Set", "Sterile Field", "Pad", "Sterile Gauze 2x2", "Drape",  "Extra Sterile Bag of Cotton Swab", "Lubricant Jelly", "Povidone/Betadine(Fill to 1/4 Cup)",  "Povidone Setup", "IUD Device: Mirena or Paraguard"],
-        "images":["iudsterileset.png", "sterilefield.png", "pad.png", "sterilegauze2x2.png", "drape.png", "cottonswabset.png", "lubricantjelly.png", "povidone.png", "povidonesetup.png"],
-        "bulletPoints": [
-            "IUD Sterile Set: Located in the left cabinet on the far side of the utility room",
-            "Sterile Field: Central section of the cabinet high above within the utility room",
-            "Pad: In the exam room, under the bed where you'll see all the speculums.",
-            "Sterile Gauze 2x2: Central section of the back room's far left side",
-            "Drape: In the exam room, in one of those cabinets below",
-            "Extra Sterile Bag of Cotton Swab: Central section of the utility room where you find all of the procedure tools",
-            "Lubricant Jelly: In the exam room, in one of those cabinets above",
-            "Povidone/Betadine: In the exam room, in one of those cabinets above",
-            "IUD Device: Mirena or Paraguard: Right section of the cabinet within the utility room"
-        ]
+        "name": "IUD Setup: Paraguard (10 years)",
+        "abbreviation": "IUD Setup: Paraguard",
+        "fullImage": "iudsetup-paraguard.jpg",
+        "instructions": [
+            "IUD Sterile Set", 
+            "Sterile surgical gloves",
+            "Sterile field (Non-Fenestrated)", 
+            "Pad sanitary",
+            "Sterile gauzes 2x2", 
+            "IUD device: Paraguard(copper)",  
+            "Sterile lube jelly(2 packs)", 
+            "Blue tray towel under ???",
+            "Povidone/Betadine(Fill to 1/4 Cup)",  
+            "Blue tray paper under table exam paper???"
+            ],
+        "specialInstructions": "Before starting the procedure, check for the Gonorrhea (GC) result. If unavailable, have the patient complete a GC test first. Next, perform the UCG pregnancy test, make sure its NEGATIVE. Finally, have them sign a consent form"
     },
 
     {
         "id": 24,
-        "name": "Knee Injection",
-        "abbreviation": "Knee Injection",
-        "instructions":"Ensure all items are in the procedure cart. Note that Kenalog-10 and Kenalog-40 are for \"ONE-TIME USE ONLY\"; discard them after the doctor has finished. For Lidocaine bottles, write the expiration date after opening. Record the open date and the expiration date, which is 28 days later.",
-        "supplies": ["Kenalog-10", "Kenalog-40", "Lidocaine HCI", "Xylocaine HCI with Epinephrine", "Procedure Cart"],
-        "images":["kenalog10.png", "kenalog40.png", "lidocaineHCI.png", "xylocaineHCI.png"]
+        "name": "IUD Setup: Mirena (8 years)",
+        "abbreviation": "IUD Setup: Mirena",
+        "fullImage": "iudsetup-mirena.jpg",
+        "instructions": [
+            "IUD Sterile Set", 
+            "Sterile surgical gloves",
+            "Sterile field (Non-Fenestrated)", 
+            "Pad sanitary",
+            "Sterile gauzes 2x2", 
+            "IUD device: Paraguard(copper)",  
+            "Sterile lube jelly(2 packs)", 
+            "Blue tray towel under ???",
+            "Povidone/Betadine(Fill to 1/4 Cup)",  
+            "Blue tray paper under table exam paper???"
+            ],
+        "specialInstructions": "Before starting the procedure, check for the Gonorrhea (GC) result. If unavailable, have the patient complete a GC test first. Next, perform the UCG pregnancy test, make sure its NEGATIVE. Finally, have them sign a consent form"
+    },
+
+    {
+        "id": "25",
+        "name": "Shoulder/Knee Joint Tray Setup",
+        "abbreviation": "Shoulder/Knee Joint Tray Setup",
+        "fullImage": "shoulder-kneejoint-traysetup.jpg",
+        "instructions": [
+            "Bandage",
+            "2 Alcohol prep",
+            "2 Povidone-Iodine swabsticks",
+            "18Gx 1 needle",
+            "25Gx 1 1/2 needle",
+            "5 ml Syringe(You can use 10cc)",
+            "1% Lidocaine HCI or Bupivacaine HCI 0.25% (depending on doctor)",
+            "Kenalog-40mg",
+            "1 of 2x2 gauzes",
+            "Sterile surgical gloves",
+            "Pain ease"
+        ]
     },
 
     {
