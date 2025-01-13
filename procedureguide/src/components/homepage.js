@@ -5,9 +5,6 @@ const Homepage = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredItems, setFilteredItems] = useState([]);
     const [selectedItem, setSelectedItem] = useState(null);
-    const [expandedIndex, setExpandedIndex] = useState(null);
-
-const toggleInstructions = (index) => setExpandedIndex(prev => (prev === index ? null : index));
 
     // Handle input change
     const handleChange = (e) => {
