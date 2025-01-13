@@ -5,6 +5,9 @@ const Homepage = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredItems, setFilteredItems] = useState([]);
     const [selectedItem, setSelectedItem] = useState(null);
+    const [expandedIndex, setExpandedIndex] = useState(null);
+
+const toggleInstructions = (index) => setExpandedIndex(prev => (prev === index ? null : index));
 
     // Handle input change
     const handleChange = (e) => {
@@ -20,6 +23,7 @@ const Homepage = () => {
             const resultsToDisplay = filteredResults.map(procedure => ({
                 procedureId: procedure.id,
                 procedureName: procedure.name,
+                procedureBullet: procedure.bullet,
                 procedureAbbreviation: procedure.abbreviation,
                 procedureInstructions: procedure.instructions,
                 procedureSubNames: procedure.subnames,
@@ -153,15 +157,36 @@ const Homepage = () => {
                                         selectedItem.procedureSubNames.map((subnameItem, index) => (
                                             <div key={index} className="mb-12">
                                                 <h2 className='text-base lg:text-xl font-semibold mb-4'>{subnameItem.subname}</h2>
-                                                <h2 className='text-base lg:text-lg mb-4'>{subnameItem.subheading}</h2>
+                                                <h2 className='text-base lg:text-lg mb-4'>{subnameItem.spubheading}</h2>
 
 
                                                 {/* <ul className='content-center fancy-list text-xl mt-4 list-decimal pl-4'> */}
-                                                <ul className='text-base lg:text-lg list-decimal pl-4'>
+                                                {/* <ul className='text-base lg:text-lg list-decimal pl-4'>
+                                                    {subnameItem.instructions.map((bullet, bulletIndex) => (
+                                                        <li key={bulletIndex}>{bullet}</li>
+                                                    ))}
+                                                </ul> */}
+
+
+                                                 {/* <div>   
+                                                    <button onClick={() => toggleInstructions(index)} className="text-blue-600 underline">
+                                                        {expandedIndex === index ? 'Hide Instructions' : 'View More'}
+                                                    </button>
+                                                    {expandedIndex === index && (
+                                                        <ul className={`text-base lg:text-lg pl-4 ${subnameItem.styleType === 'bullet' ? 'list-disc' : 'list-decimal'}`}>
+                                                            {subnameItem.instructions.map((bullet, bulletIndex) => (
+                                                                <li key={bulletIndex}>{bullet}</li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
+                                                </div>  */}
+
+                                                <ul className={`text-base lg:text-lg pl-4 ${subnameItem.styleType === 'bullet' ? 'list-disc' : 'list-decimal'}`}>
                                                     {subnameItem.instructions.map((bullet, bulletIndex) => (
                                                         <li key={bulletIndex}>{bullet}</li>
                                                     ))}
                                                 </ul>
+
                                                 <h2 className='text-base lg:text-lg mt-2'>{subnameItem.subheading2}</h2>
                                             </div>
                                         ))

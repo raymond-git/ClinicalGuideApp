@@ -453,5 +453,212 @@
         "instructions": "Retrieve a \"Skin Staple Remover\" from the inventory room for the doctor. Please note that it is for \"SINGLE USE ONLY\" and should be discarded after the doctor has finished using it.",
         "supplies": ["Staple Remover Front View", "Staple Remove Back View"],
         "images":["stapleremoverfront.png", "stapleremoverback.png"]
+    },
+
+    
+
+    {
+        "id": 26,
+        "name": "Pediatric Immunizations",
+        "abbreviation": "Pediatric Immunizations",
+        "subnames": [
+            {
+                "subname": "2 Months",
+                "instructions": [
+                    "Dtap",
+                    "HepB",
+                    "Polio",
+                    "Hib",
+                    "PCV",
+                    "Rotavirus"
+                ],
+                "styleType": "bullet" 
+            },
+
+            {
+                "subname": "4 Months",
+                "instructions": [
+                    "2 Dtap",
+                    "2 HepB",
+                    "2 Polio",
+                    "2 Hib",
+                    "2 PCV",
+                    "2 Rotavirus"
+                ],
+                "styleType": "bullet" 
+            },
+            {
+                "subname": "6 Months",
+                "instructions": [
+                    "3 Dtap",
+                    "3 HepB",
+                    "3 Polio",
+                    "3 Hib",
+                    "3 PCV",
+                    "3 Rotavirus"
+                ],
+                "styleType": "bullet" 
+            },
+            {
+                "subname": "12 Months",
+                "instructions": [
+                    "3 Dtap",
+                    "3 HepB",
+                    "3 Polio",
+                    "3 Hib",
+                    "3 PCV",
+                    "3 Rotavirus",
+                    "1 HepA",
+                    "1 MMR",
+                    "1 VZV"
+                ],
+                "styleType": "bullet" 
+            },
+            {
+                "subname": "15 Months",
+                "instructions": [
+                    "4 Dtap",
+                    "3 HepB",
+                    "3 Polio",
+                    "4 Hib",
+                    "4 PCV",
+                    "3 Rotavirus",
+                    "1 HepA",
+                    "1 MMR",
+                    "1 VZV"
+                ],
+                "styleType": "bullet" 
+            },
+            {
+                "subname": "18 Months",
+                "instructions": [
+                    "4 Dtap",
+                    "3 HepB",
+                    "3 Polio",
+                    "4 Hib",
+                    "4 PCV",
+                    "3 Rotavirus",
+                    "2 HepA",
+                    "1 MMR",
+                    "1 VZV"
+                ],
+                "styleType": "bullet" 
+            },
+            {
+                "subname": "4 Years",
+                "instructions": [
+                    "5 Dtap",
+                    "3 HepB",
+                    "4 Polio",
+                    "4 Hib",
+                    "4 PCV",
+                    "3 Rotavirus",
+                    "2 HepA",
+                    "2 MMR",
+                    "2 VZV"
+                ],
+                "styleType": "bullet" 
+            },
+            {
+                "subname": "11 Years",
+                "instructions": [
+                    "5 Dtap",
+                    "3 HepB",
+                    "4 Polio",
+                    "4 Hib",
+                    "4 PCV",
+                    "3 Rotavirus",
+                    "2 HepA",
+                    "2 MMR",
+                    "2 VZV",
+                    "1 HPV",
+                    "1 MCV4",
+                    "1 Tdap"
+                ],
+                "styleType": "bullet" 
+            },
+            {
+                "subname": "16 Years",
+                "instructions": [
+                    "5 Dtap",
+                    "3 HepB",
+                    "4 Polio",
+                    "4 Hib",
+                    "4 PCV",
+                    "3 Rotavirus",
+                    "2 HepA",
+                    "2 MMR",
+                    "2 VZV",
+                    "1 HPV",
+                    "2 MCV4",
+                    "1 Tdap",
+                    "1 MenB"
+                ],
+                "styleType": "bullet" 
+            },
+            {
+                "subname": "Moderna",
+                "instructions": [
+                    " < 12 years old",
+                    "12-18 years old",
+                    "Thaw the COVID shot for 45 minutes before administering."
+                ],
+                "styleType": "bullet" 
+            },
+            {
+                "subname": "Flu",
+                "instructions": [
+                    "Children can get the flu vaccine and are considered at risk for the flu once they are 6 months old",
+                    "Children 6 months to 8 years old need two doses of the flu vaccine at least 4 weeks apart if they have never received the vaccine before. Have not received at least two doses in the past"
+                ],
+                "styleType": "bullet" 
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Pediatric WCC Guide",
+        "abbreviation": "Pediatric WCC Guide",
+        "subnames": [
+            {
+                "subname": "Vitals",
+                "instructions": [
+                    "Starting 3 years old: Weight, Height, Temperature, Heart Rate",
+                    "Less than 3 years old: Weight, Height, Temperature, Head Circumference"
+                ],
+                "styleType": "bullet" 
+            },
+            {
+                "subname": "Fluoride",
+                "instructions": [
+                    "12, 18, 24 months, 3-5 years old"
+                ],
+                "styleType": "bullet" 
+            },
+            {
+                "subname": "Vision",
+                "instructions": [
+                    ">= 4y"
+                ],
+                "styleType": "bullet" 
+            },
+            {
+                "subname": "GoCheck (Smartphone App for Screening Children's Vision)",
+                "instructions": [
+                    "1y, 2y, 3y, New Patient",
+                    "Make sure to screen in a dark room",
+                    "Make sure to check pass or fail"
+                ],
+                "styleType": "bullet" 
+            },
+            {
+                "subname": "Hearing",
+                "instructions": [
+                    "4y, 5y, 6y, 8y, 10y, 13y, 16y, 18y, New Patient"
+                ],
+                "styleType": "bullet" 
+            }
+            
+        ]
     }
 ]
