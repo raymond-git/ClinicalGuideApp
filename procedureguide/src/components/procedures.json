@@ -302,14 +302,16 @@
 
     {
         "id": 17,
-        "name": "Strep A",
-        "abbreviation": "Strep A",
+        "name": "Strep Throat A Test",
+        "abbreviation": "Strep Throat A Test",
         "fullImage": "strepA.jpg",
         "instructions": [
-            "Grab Strep A Kit",
-            "Pour idk how many drops of A and B into the transport tube. I don't remember, I have to read the manual again",
-            "Put the swab stick in the transport tube, make sure to squeeze and mix",
-            "Read results in 5 minutes"
+            "Grab an empty tube",
+            "Add 4 drops of Reagent A, then 4 drops of Reagent B to tube",
+            "Place the swab in the transport tube and rotate 10 times. When removing the swab, press it against the tube’s side and squeeze the tube to retain most of the liquid inside",
+            "Let it stand for 1 minute",
+            "Place Test Strip in Tube. Liquid should be at or just below MAX line",
+            "Read result at 5 minutes"
         ]
     },
 
@@ -624,7 +626,7 @@
                 "subname": "Vitals",
                 "instructions": [
                     "Starting 3 years old: Weight, Height, Temperature, Heart Rate",
-                    "Less than 3 years old: Weight, Height, Temperature, Head Circumference"
+                    "Less than 3 years old: Weight, Height(Check by the bed), Temperature, Head Circumference"
                 ],
                 "styleType": "bullet" 
             },
@@ -660,5 +662,46 @@
             }
             
         ]
+    },
+
+    {
+        "id": 28,
+        "name": "Endometrial Biopsy",
+        "abbreviation": "Endometrial Biopsy",
+        "fullImage": "endometrialbiopsy.jpg",
+        "instructions": [
+            "EMB Sterile pack (same as IUD Pack)",
+            "GynoSampler (endometrial curette)",
+            "Sterile Drape (non-fenestrated)",
+            "1 pair of Sterile Gloves (size depending on doctors)",
+            "Sanitary Pad",
+            "Formaline bottle",
+            "Betadine Povidone bottle",
+            "Silver nitrate stick",
+            "Extra bag of sterile cotton swabs"
+        ],
+        "specialInstructions": [
+            "1.) Place a tray towel (blue paper) under the table in the small tray\n",
+            "2.) Fill the sterile cup 1/2 of the Povidone/Betadine\n",
+            "3.) Place sanitary pad.... not done yet\n",
+            "4.) Instruct patient to undress from waist down and use paper drape to cover"
+        ]
+    },
+
+    {
+        "id": 29,
+        "name": "Pelvic Exam (Wet Mount)",
+        "abbreviation": "Pelvic Exam (Wet Mount)",
+        "fullImage": "pelvicExamWetMount.jpg",
+        "instructions": [
+            "1.) Sodium Chloride 0.85% w/v (NaCl)",
+            "2.) Potassium Hydroxide 10% w/v (KOH)",
+            "3.) Lubricant",
+            "4.) 2 Q-tip applicators",
+            "5.) Gloves",
+            "6.) Speculum",
+            "7.) Orange Aptima Swab"
+        ],
+        "specialInstructions" : "Instruct patient to undress from waist down and use paper drape to cover"
     }
 ]
